@@ -1,165 +1,173 @@
-IMU Rotational-Activity Classification Pipeline
-Filter stack + feature engineering for Random Forest (50 Hz, 2 s / 100-sample window)
-0. What the data actually is (verified from ROT_activities_master.csv)
-Fact
-Value
-Why it matters
-Rows
-1,048,572
-—
-Devices
-LEFT, RIGHT wrist units
-2 independent 6-DOF IMUs per sample window
-Classes
-12, not 8: {B,L,R}_{SHOU,HAND}_{CLK,ACLK}
-Body/Left/Right × Shoulder/Hand × Clockwise/Anti-clockwise
-Participants
-6 (1–6), 65 sessions
-Must split by participant, not by row
-Channels
-accel_x/y/z, gyro_x/y/z, mag_x/y/z
-mag_x/y/z = 0.0 for every row — magnetometer is dead/unused
-Nominal rate
-~50 Hz average
-Timestamps arrive in bursts (BLE packet batching): inter-sample gaps range 1 ms–188 ms, not a clean 20 ms grid
-Accel range
-±4.6 (unit-less, consistent with g)
-includes gravity (not gravity-removed)
-Gyro range
-±520 (consistent with deg/s)
-large excursions confirm fast wrist/shoulder rotation
-Two consequences that change the pipeline vs. a "textbook" IMU pipeline:
-No magnetometer → any orientation filter (Madgwick, EKF, ISIF-BU) must run in 6-DOF IMU-only mode. Yaw will drift; roll/pitch (gravity-referenced) will not.
-Timestamps are irregular → you must resample to a uniform 50 Hz grid before any filter runs, or every filter above (all of which assume fixed Δt) will be silently wrong.
-1. What each filter actually does (and where it belongs)
-Filter
-Category
-Purpose
-Verdict for this task
-Median filter
-Non-linear despiking
-Kills single-sample spikes/dropouts without smearing edges
-✅ Use — Stage 1, cheap insurance against BLE burst glitches
-Moving average
-FIR low-pass (simplest)
-Smooths, but blurs edges, adds lag, poor stop-band
-❌ Skip — Butterworth strictly better here
-Savitzky-Golay
-Polynomial-fit smoother
-Smooths while preserving peak shape and slope (good for derivatives)
-✅ Use — Stage 2b, only for jerk/derivative features
-Butterworth (low-pass, IIR)
-Frequency-domain denoise
-Maximally flat pass-band, sharp roll-off, cheap
-✅ Use — Stage 2a, primary denoiser (run zero-phase)
-FIR / IIR (general)
-Filter design families
-Butterworth is an IIR filter; FIR would need ~4× the order for equal roll-off
-Covered by Butterworth choice above
-Kalman filter
-Linear state estimator
-Optimal only if the motion model is linear + noise is Gaussian & known
-⚠️ Arm rotation is nonlinear → not used directly
-Extended Kalman Filter (EKF)
-Nonlinear state estimator
-Linearizes via Jacobian each step; degrades under fast/abrupt turns (exactly the paper's failure case)
-⚠️ Superseded by ISIF-BU below
-Madgwick
-Complementary orientation filter
-Fast, gradient-descent quaternion fusion of accel+gyro(+mag)
-✅ Use as fallback if compute budget is too tight for ISIF-BU
-ISIF-BU (uploaded paper)
-Robust nonlinear state estimator (SIF + Bayesian update)
-Designed exactly for abrupt turning-rate model mismatch — sliding-mode robustness + Bayesian refinement, QR/SVD instead of Cholesky (never fails to decompose)
-✅ Use as primary orientation/attitude estimator — a sudden CLK↔ACLK reversal is precisely the "turning-rate jump" scenario the paper validates against
-Key insight driving the design: CLK vs ACLK is a sign-of-rotation problem. The paper's own test scenario (ϑ_t → ϑ_t + π/50 at t = 100 s, a step change in turning rate) is structurally identical to a person reversing rotation direction mid-window. ISIF-BU was shown in the paper to cut ARMSE by 14–44% over CSIF/EKF-style filters under exactly this kind of abrupt-turn mismatch — so it is the correct choice for estimating a clean, low-noise rotation-angle trace per window, not just a "nice to have."
-2. Recommended pipeline (end-to-end order)
-Raw CSV (LEFT + RIGHT, irregular timestamps, mag=0)
-        │
-Stage 0 │ Resample & sync          → uniform 50 Hz grid, linear interp, drop mag_*
-        ▼
-Stage 1 │ Median despike           → window = 3 samples, per axis, per device
-        ▼
-Stage 2a│ Butterworth low-pass     → order 4, zero-phase (filtfilt)
-        │                            accel cutoff 10 Hz | gyro cutoff 15 Hz
-        ▼
-Stage 2b│ Savitzky-Golay (branch)  → window 7, polyorder 2 → jerk / angular-accel only
-        ▼
-Stage 3 │ ISIF-BU attitude filter  → per device: quaternion / roll-pitch-yaw + gyro bias
-        │                            (Madgwick = fallback if latency-constrained)
-        ▼
-Stage 4 │ Windowing                → 100 samples (2.0 s), 50-sample stride (50% overlap)
-        ▼
-Stage 5 │ Feature extraction       → per device, then concat LEFT+RIGHT (+ cross-device)
-        ▼
-Stage 6 │ Random Forest            → 18 trees, max_depth 8, min_samples_leaf 2,
-        │                            min_samples_split 4, max_features='sqrt'
-        ▼
-     Prediction (12 classes)
-Run Stage 1–3 independently per device (LEFT, RIGHT) since they are physically separate sensors; only merge at the feature vector in Stage 5.
-3. Stage-by-stage configuration
-Stage 0 — Resample & sync
-Target grid: fixed Δt = 20 ms (50 Hz), built from session start → session end.
-Linear-interpolate accel/gyro onto the grid per device.
-Drop mag_x, mag_y, mag_z (always zero — carrying them only adds noise/leakage risk to the model).
-Re-align LEFT and RIGHT onto the same grid so cross-device features (Stage 5) are timestamp-matched.
-Stage 1 — Median despike
-Window: 3 samples (5 if you see visible glitch survivors).
-Apply independently to each of the 6 channels (accel_x/y/z, gyro_x/y/z), per device.
-scipy.signal.medfilt(x, kernel_size=3)
-Stage 2a — Butterworth low-pass (primary denoiser)
-Order: 4.
-Cutoff: 10 Hz for accel, 15 Hz for gyro (Nyquist = 25 Hz at 50 Hz sampling; human limb motion energy is almost entirely <10 Hz, fast wrist snap can reach ~12–15 Hz).
-Zero-phase: use filtfilt, not lfilter — you are processing offline/batch, so there is no reason to accept the phase lag of a causal filter.
-b, a = butter(4, cutoff/(fs/2), btype='low'); x_f = filtfilt(b, a, x)
-Stage 2b — Savitzky-Golay (derivative branch only)
-Window length: 7 samples, polynomial order: 2.
-Purpose: compute smooth jerk (d(accel)/dt) and angular acceleration (d(gyro)/dt) for feature extraction — do not use this to replace Stage 2a; it's a parallel branch feeding Stage 5 only.
-savgol_filter(x, window_length=7, polyorder=2, deriv=1, delta=1/fs)
-Stage 3 — ISIF-BU attitude estimator (primary), Madgwick (fallback)
-State per device: x = [q0, q1, q2, q3, bgx, bgy, bgz] (quaternion + gyro bias), or the simpler [roll, pitch, yaw, bias] Euler form if you want fewer states for the shallow RF trees to exploit downstream.
-Mapping from the paper's ISIF-BU (Algorithm 1) to this problem:
-Process model f(·): quaternion propagation via bias-corrected gyro rate (standard strap-down integration), replacing the paper's turning-model f(x).
-Measurement model h(·): predicted gravity vector in body frame from the current quaternion, compared against the Stage-2a-filtered accelerometer reading (magnetometer term = 0, so drop it from h(·) and R_t — do not feed the dead mag channels in as zero-variance measurements, that will corrupt Σ_zz).
-Decomposition: QR + SVD (not Cholesky) for Σ_t|t-1 and Σ^(p)_t|t — required because sudden direction reversals are exactly the kind of model mismatch that makes Cholesky fail (paper §3.2, Remark 2).
-Saturation function g(k) = 2(1+e^{-b(k-c)})^{-1} - 1: set c = 0, b = 2.1 (paper's recommended sweet spot is b ∈ [1.7, 2.9]; b = 2.1 is what the paper itself uses in its final comparison).
-Sliding boundary layer: Δ = 0.5 R_t (accelerometer measurement covariance).
-Chi-square confidence factor: σ = 0.05 (95% confidence), μ = dim(z) − 1 = 2 (gravity vector reduced to 2 independent constraints after normalization, or 3 if used un-normalized — pick 2 if you normalize the accel vector to unit gravity first, which you should, since only direction — not magnitude — is informative for orientation).
-Reset per window: initialize the quaternion at the start of every 2 s window from the previous window's last estimate (don't reset to identity) so yaw drift never exceeds ~2 s worth — with no magnetometer this keeps drift low single-digit degrees, which is irrelevant since CLK/ACLK is decided by the sign and magnitude of yaw change across the window, not absolute yaw.
-Output per window, per device: a clean [roll(t), pitch(t), yaw(t)] (or quaternion) trace at 50 Hz — this feeds Stage 5.
-Fallback: if compute budget doesn't allow ISIF-BU (it is the heaviest filter — paper reports ~1.3 s per 300-step Monte Carlo run vs. ~0.6–0.9 s for EKF-class filters), use Madgwick (IMU-only, no mag) with gain β ≈ 0.041 as a cheaper substitute. Expect the classifier to lose some accuracy on activities that reverse direction mid-window, since Madgwick has no explicit robustness to abrupt turning-rate mismatch.
-Stage 4 — Windowing
-Window length: 100 samples = 2.0 s (fixed, as specified).
-Stride: 50 samples (50% overlap) — doubles effective training data and is standard for HAR; drop to 0% overlap only if session count/session length is a strict constraint.
-Label a window by the activity_label that covers ≥ 50% of it (should be 100% inside your recording protocol, but guard against boundary windows spanning two labels — discard those).
-Stage 5 — Feature extraction (per window, per device → then concatenate)
-Time-domain (per channel: accel_x/y/z, gyro_x/y/z, jerk_x/y/z, ang-accel_x/y/z, roll/pitch/yaw): mean, std, min, max, range, RMS, mean absolute deviation, skewness, kurtosis, zero-crossing rate, signal magnitude area (SMA, accel and gyro triads).
-Frequency-domain (per channel, FFT on the 100-sample window — 100 samples gives 50 usable bins at 50 Hz, i.e. 0.5 Hz resolution, enough for this purpose): dominant frequency, spectral energy, spectral entropy, energy in 0–3 Hz / 3–8 Hz / 8–15 Hz bands.
-Orientation-derived (the highest-value features for this specific task):
-Net rotation angle = yaw(t=100) − yaw(t=0) from the ISIF-BU trace → sign directly encodes CLK vs ACLK; this is close to a single-feature discriminator.
-Range and std of roll/pitch/yaw over the window.
-Peak angular velocity and its sign (max(|gyro_z|) * sign(gyro_z at peak)).
-Quaternion component stats (mean, std) if you keep the quaternion form instead of Euler.
-Cross-axis / cross-device (captures body-location, i.e. Shoulder vs Hand, Left vs Right vs Body):
-Correlation between accel axes and between gyro axes (captures rotation-plane).
-Correlation between LEFT-device and RIGHT-device signals (shoulder rotations move both wrists coherently; hand rotations are near-independent — this is your main Shoulder-vs-Hand and Left/Right/Body discriminator).
-Amplitude ratio ‖accel‖_LEFT / ‖accel‖_RIGHT and same for gyro.
-Feature budget: ~10 time-domain × 15 channels ≈ 150, +4 freq-domain × 15 ≈ 60, + ~10 orientation, + ~8 cross-device ≈ ~230 raw features per device-pair-window. For an 18-tree, depth-8 forest, prune this down via feature importance (fit once, keep top ~60–80) before finalizing — a shallow, narrow forest overfits and slows down with >200 noisy columns; it does not need them.
-Stage 6 — Random Forest
-Your current settings (18 trees, depth 8, min_samples_leaf 2, min_samples_split 4, max_features='sqrt') are reasonable for ~60–80 features. Two changes that will move accuracy more than any filter tweak:
-Group cross-validation by participant_id (leave-one-participant-out), not random row/window split — random splits leak overlapping-window and same-session data across train/test and will overstate accuracy.
-Class-balance check: your 12 classes range 64k–102k raw rows — roughly balanced, but confirm balance again after windowing, not before; add class_weight='balanced' if windows skew.
-4. Why this order and not another
-Despike before smoothing (Stage 1 before 2a): a median filter run after Butterworth can't undo the ringing a spike causes when it convolves through the low-pass filter. Spikes must die first.
-Denoise before state estimation (Stage 2 before 3): ISIF-BU (like any Kalman-family filter) assumes its input noise covariance R_t is stationary and Gaussian; feeding it raw spiky data violates that assumption and destabilizes the Bayesian update. Feed it the Butterworth-cleaned signal.
-State estimation before windowing/features (Stage 3 before 4): orientation is a stateful estimate — it needs continuous evolution across the whole session, not per-window restarts (aside from the drift-reset carry-over described above). Windowing first would break the recursive filter's history.
-Savitzky-Golay stays a side branch, not the main denoiser: its strength (preserving derivative shape) is wasted on the accel/gyro channels the RF consumes directly — Butterworth's steeper roll-off removes more true noise there. Save S-G for exactly the channels where derivative shape matters (jerk/ang-accel).
-5. Summary checklist
-[ ] Resample to uniform 50 Hz grid per device before touching any filter
-[ ] Drop dead mag_x/y/z columns
-[ ] Median filter (k=3) → Butterworth low-pass (order 4, filtfilt, 10/15 Hz) on accel/gyro
-[ ] Savitzky-Golay (win 7, order 2) → jerk & angular-acceleration features only
-[ ] ISIF-BU (6-DOF, no mag), b=2.1, c=0, Δ=0.5R_t, σ=0.05, QR+SVD decompositions → roll/pitch/yaw per device, carried continuously across the session, not reset per window
-[ ] Window: 100 samples / 2.0 s, 50% overlap
-[ ] Features: time + frequency + orientation-derived + cross-device correlation (~230 raw → prune to top 60–80 by importance)
-[ ] Random Forest: current hyperparameters are fine; fix evaluation to leave-one-participant-out
+# HAR-Spondylitis — Dual-Wrist IMU Rotation Recognition
+
+**Classifying 12 shoulder and hand rotation movements from two wrist-worn IMUs, evaluated on people the model has never seen.**
+
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-Random%20Forest-F7931E?logo=scikitlearn&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-signal%20processing-8CAAE6?logo=scipy&logoColor=white)
+![ESP32](https://img.shields.io/badge/Edge-ESP32--P4%20C99%20export-E7352C?logo=espressif&logoColor=white)
+
+---
+
+## At a glance
+
+| | |
+|---|---|
+| **Task** | 12-class activity recognition: {Both, Left, Right} × {Shoulder, Hand} × {Clockwise, Anti-clockwise} |
+| **Sensors** | Two 6-axis IMUs (accelerometer + gyroscope), one per wrist, streamed over BLE |
+| **Data** | 6 participants, 125 recording sessions, 5,025 two-second windows |
+| **Model** | Random Forest (18 trees, depth 8) on 70 features chosen from 520 |
+| **Evaluation** | Leave-one-participant-out: every test window comes from a person the model never trained on |
+| **Result** | **67.7 % accuracy / 0.687 macro-F1** across 12 classes (chance level = 8.3 %) |
+| **Deployment** | Random Forest exported to dependency-free C99 for an ESP32-P4 microcontroller (~95 KB flash, no heap) |
+
+---
+
+## Why this project is interesting
+
+Clockwise and anti-clockwise versions of the same movement look **almost identical** to standard statistics: same amplitude, frequency, and energy. The information that tells them apart is in the **sign of the rotation**, which most HAR feature sets throw away. Telling a shoulder rotation from a wrist rotation, and one arm from both, means reasoning about **how the two wrists move together**.
+
+This project tackles both problems by:
+
+- estimating each wrist's **3D orientation** over time with a robust nonlinear filter, so that "net rotation angle" becomes a feature;
+- adding **cross-device features** (left ↔ right correlation, amplitude ratios) that capture whether both arms move together;
+- evaluating **honestly**: by held-out participant, not by random split.
+
+---
+
+## Results
+
+### Honest evaluation (leave-one-participant-out)
+
+| Held-out participant | Windows | Accuracy | Macro-F1 |
+|---|---:|---:|---:|
+| P1 | 1,023 | 0.855 | 0.861 |
+| P2 | 1,285 | 0.702 | 0.673 |
+| P3 | 904 | 0.506 | 0.432 |
+| P4 | 896 | 0.770 | 0.749 |
+| P5 | 651 | 0.731 | 0.557 |
+| P6 | 266 | 0.000 | 0.000 |
+| **Overall** | **5,025** | **0.677** | **0.687** |
+
+Excluding P6 (see below), accuracy is **0.715**.
+
+### Before → after
+
+| | Earlier pipeline | This pipeline |
+|---|---|---|
+| Classes | 8 | **12** |
+| Test split | Held-out *session* (same people in train and test) | Held-out *participant* (stricter) |
+| Signal preprocessing | None | Resample → despike → low-pass → orientation filter |
+| Honest accuracy | 0.294 | **0.677** |
+
+Accuracy more than **doubled** while the problem got **harder**: more classes and a stricter test.
+
+### Why not report 99 %?
+
+A random train/test split on the same features scores **0.998**. That number is not real: overlapping windows from the same person end up on both sides of the split, so the model memorises the person instead of learning the movement. It is shown only to demonstrate the leakage, and the headline numbers above never use it.
+
+### Debugging a 0 % fold
+
+Participant 6 scored 0 %. The confusion pattern was a perfect mirror image: left-hand anti-clockwise was predicted as right-hand clockwise, and so on. **Side and direction were both inverted**, which is the signature of the two sensors being **worn on swapped wrists** during recording. The model recognises the movements correctly; the labels are mirrored. The data was **not** silently relabelled, and this has been flagged for confirmation with the data-collection team.
+
+<p align="center">
+  <img src="newtrial2/HAR_LEFT_PCA/plots/lopo_confusion_matrix.png" width="48%" alt="Leave-one-participant-out confusion matrix">
+  <img src="newtrial2/HAR_LEFT_PCA/plots/lopo_fold_accuracy.png" width="48%" alt="Per-participant fold accuracy">
+</p>
+
+---
+
+## Pipeline
+
+```
+Raw BLE stream (LEFT + RIGHT wrist, irregular timestamps)
+   │
+   ├─ Stage 0  Resample & sync      uniform 50 Hz grid, both wrists time-aligned
+   ├─ Stage 1  Median despike       kernel 3: removes BLE burst glitches
+   ├─ Stage 2a Butterworth low-pass order 4, zero-phase; 10 Hz accel / 15 Hz gyro
+   ├─ Stage 2b Savitzky-Golay       smooth derivatives → jerk & angular acceleration
+   ├─ Stage 3  ISIF-BU attitude     robust quaternion + gyro-bias estimator (Madgwick fallback)
+   ├─ Stage 4  Windowing            2 s windows (100 samples), 50 % overlap
+   ├─ Stage 5  Features             520 per window: time, frequency, orientation, cross-device
+   └─ Stage 6  Random Forest        top-70 features selected inside each CV fold → 12 classes
+```
+
+**Key engineering decisions**
+
+- **Resample first.** Packets arrive in bursts (gaps from 1 ms to 188 ms). Every filter and FFT assumes a fixed time step, so skipping this step would silently corrupt every frequency-based feature.
+- **Despike before smoothing.** A low-pass filter smears a spike into ringing that can't be undone later.
+- **Orientation filter without a magnetometer.** The magnetometer channels were dead (all zeros), so the filter runs in 6-axis mode with QR/SVD decompositions instead of Cholesky, which stays numerically stable when the user suddenly reverses direction.
+- **Leak-free feature selection.** The 520 → 70 feature pruning is part of the scikit-learn `Pipeline`, so each fold refits it on training participants only.
+- **Class balance after windowing.** Window counts per class ranged 207–496, so `class_weight='balanced'` is applied automatically.
+
+**Most important features** (from the deployed model): signed peak angular velocity, mean gyroscope rate, roll/pitch statistics from the orientation filter, and left↔right accelerometer correlation. These are exactly the direction, posture, and two-arm signals the design targeted.
+
+<p align="center">
+  <img src="newtrial2/HAR_LEFT_PCA/plots/readme_feature_importance.png" width="70%" alt="Top deployed features">
+</p>
+
+---
+
+## Edge deployment
+
+`generated/imu_model_compact.h` is an auto-generated, **pure C99** export of a trained Random Forest for the **ESP32-P4** (RISC-V, hardware FPU):
+
+- flat 10-byte node structs, ~9.7k nodes, **~95 KB flash**
+- `<stdint.h>` + `<math.h>` only: no standard library, no heap
+- includes the on-device feature extraction, with a Python "golden vector" harness (`_validate_uci_c.py`, `imu_rot_golden.json`) to check that the C output matches Python
+
+> Note: this header was exported from an earlier iteration of the model (different feature set and evaluation split), not from the 12-class leave-one-participant-out pipeline reported above.
+
+---
+
+## Repository structure
+
+```
+newtrial2/HAR_LEFT_PCA/
+├── HAR_4_PCA.py                 # Main pipeline: preprocessing → features → LOPO evaluation → export
+├── HAR_ROT_HIER.py              # Hierarchical variant: separate Body / Direction / Side heads
+├── har_rot_features.py          # Side-effect-free feature engine (shared with firmware tooling)
+├── gesture_directional_features.py  # Signed "phase" features for clockwise vs anti-clockwise
+├── adaptive_weighting.py        # Physics-based posterior gating & fallback rules
+├── pca_feature_reduction.py     # PCA with automatic elbow (Kneedle) selection
+├── pca_fix.py                   # PCA QA: standardisation & orthogonality checks
+├── sweep_hybrid.py              # Fast hyperparameter sweep on cached features
+├── _validate_uci_c.py           # Python ↔ C feature-parity harness
+├── HAR_4_PCA_legacy.py          # Previous pipeline, kept for comparison
+├── readme.md                    # Full design spec (filters, parameters, rationale)
+├── readme_summary.md            # Implementation report & detailed results
+├── plots/                       # Evaluation, EDA and PCA figures
+└── generated/                   # Metrics (JSON) and the C model header
+```
+
+---
+
+## Running it
+
+```bash
+pip install numpy pandas scipy scikit-learn imbalanced-learn matplotlib seaborn joblib
+
+cd newtrial2/HAR_LEFT_PCA
+python HAR_4_PCA.py                       # full run (~8–10 min first time, ~3 min cached)
+ATTITUDE_FILTER=madgwick python HAR_4_PCA.py   # cheaper orientation filter
+TOPK_FEATURES=80 python HAR_4_PCA.py           # change the feature budget
+REBUILD_CACHE=1 python HAR_4_PCA.py            # force re-filtering
+```
+
+> **Data is not included.** The dataset was collected during an internship and is not public. The script expects `ROT_activities_master.csv` (columns: `timestamp, device_id, activity_label, accel_x/y/z, gyro_x/y/z, mag_x/y/z, session_id, participant_id`) in `newtrial2/HAR_LEFT_PCA/`.
+
+---
+
+## Limitations & next steps
+
+- **Small cohort.** With 6 participants, per-fold accuracy varies widely (0.51–0.86). More participants would help more than more features.
+- **Left-shoulder classes are weakest** (F1 ≈ 0.34): only 4 of 6 participants recorded them.
+- **Participant 6 labels** need confirmation; relabelling would raise overall accuracy to roughly 0.72–0.75.
+- **Next:** re-export the firmware model from the 12-class pipeline, and test the hierarchical model (`HAR_ROT_HIER.py`) under the same leave-one-participant-out protocol.
+
+---
+
+## Authors
+
+- **Ashika Maji**
+- [**@OishiBanerjee07**](https://github.com/OishiBanerjee07)
