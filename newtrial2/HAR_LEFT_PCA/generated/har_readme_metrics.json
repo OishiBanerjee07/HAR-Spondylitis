@@ -1,0 +1,114 @@
+{
+  "methodology": "leave-one-participant-out (GroupKFold on participant_id)",
+  "attitude_filter": "isif",
+  "n_windows": 5025,
+  "n_raw_features": 520,
+  "n_deployed_features": 70,
+  "n_classes": 12,
+  "classes": [
+    "B_HAND_ACLK",
+    "B_HAND_CLK",
+    "B_SHOU_ACLK",
+    "B_SHOU_CLK",
+    "L_HAND_ACLK",
+    "L_HAND_CLK",
+    "L_SHOU_ACLK",
+    "L_SHOU_CLK",
+    "R_HAND_ACLK",
+    "R_HAND_CLK",
+    "R_SHOU_ACLK",
+    "R_SHOU_CLK"
+  ],
+  "class_weight": "balanced",
+  "lopo_overall_accuracy": 0.6766169154228856,
+  "lopo_overall_macro_f1": 0.6868570500077403,
+  "lopo_per_fold": [
+    {
+      "participant": 2,
+      "n_test": 1285,
+      "test_acc": 0.7019455252918287,
+      "test_macro_f1": 0.673404317231488,
+      "train_acc": 0.9989304812834224
+    },
+    {
+      "participant": 1,
+      "n_test": 1023,
+      "test_acc": 0.855327468230694,
+      "test_macro_f1": 0.8606060606060607,
+      "train_acc": 0.9995002498750625
+    },
+    {
+      "participant": 3,
+      "n_test": 904,
+      "test_acc": 0.5055309734513275,
+      "test_macro_f1": 0.4320448595891396,
+      "train_acc": 1.0
+    },
+    {
+      "participant": 4,
+      "n_test": 896,
+      "test_acc": 0.7700892857142857,
+      "test_macro_f1": 0.7486097343652028,
+      "train_acc": 0.9990312424315815
+    },
+    {
+      "participant": 5,
+      "n_test": 651,
+      "test_acc": 0.7311827956989247,
+      "test_macro_f1": 0.5568550921836535,
+      "train_acc": 0.9995427526291724
+    },
+    {
+      "participant": 6,
+      "n_test": 266,
+      "test_acc": 0.0,
+      "test_macro_f1": 0.0,
+      "train_acc": 0.9991594872872452
+    }
+  ],
+  "diagnostic_leaky_random_split_accuracy": 0.9980099502487563,
+  "rf_params": {
+    "n_estimators": 18,
+    "max_depth": 8,
+    "min_samples_leaf": 2,
+    "min_samples_split": 4,
+    "max_features": "sqrt"
+  },
+  "window": {
+    "size": 100,
+    "step": 50,
+    "fs_hz": 50.0
+  },
+  "top_deployed_features": [
+    "R__gyro_x__mean",
+    "R__peak_angvel_x",
+    "L__peak_angvel_x",
+    "L__accel_y__mean",
+    "R__corr_gyro_y_gyro_z",
+    "L__roll__min",
+    "L__gyro_y__std",
+    "L__roll__mean",
+    "L__gyro_x__mean",
+    "R__pitch__mad",
+    "L__pitch__range",
+    "R__accel_y__max",
+    "X__corr_LR_accel_x",
+    "L__gyro_z__rms",
+    "R__pitch__spec_energy",
+    "R__accel_x__spec_energy",
+    "L__roll__max",
+    "R__accel_y__mean",
+    "R__yaw__max",
+    "R__pitch__range",
+    "L__pitch__spec_energy",
+    "L__pitch__std",
+    "R__yaw__mean",
+    "R__accel_x__mad",
+    "L__gyro_y__mean",
+    "L__accel_y__max",
+    "R__accel_x__std",
+    "X__corr_LR_accel_mag",
+    "R__gyro_x__min",
+    "L__pitch__mad"
+  ]
+}

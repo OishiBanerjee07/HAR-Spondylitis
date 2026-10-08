@@ -1,0 +1,144 @@
+{
+  "embedded": {
+    "val": 0.3452186546900638,
+    "test": 0.2972972972972973,
+    "n_feat": 555
+  },
+  "plus_research": {
+    "val": 0.3401776492955785,
+    "test": 0.30864864864864866,
+    "n_feat": 632
+  },
+  "delta_val": -0.005041005394485321,
+  "delta_test": 0.011351351351351346,
+  "n_research": 77,
+  "research_in_top100": 11,
+  "top_research": [
+    {
+      "rank": 2,
+      "feature": "res_gyro_net_x",
+      "importance": 0.05371091658925264
+    },
+    {
+      "rank": 6,
+      "feature": "res_gyro_signed_momentum",
+      "importance": 0.03523335839899901
+    },
+    {
+      "rank": 17,
+      "feature": "res_gyro_net_y",
+      "importance": 0.01090190608455151
+    },
+    {
+      "rank": 31,
+      "feature": "res_gyro_axis_dominance",
+      "importance": 0.005164066468664031
+    },
+    {
+      "rank": 48,
+      "feature": "res_gyromag_sampen",
+      "importance": 0.0035808807593900632
+    },
+    {
+      "rank": 55,
+      "feature": "res_accelmag_shape_factor",
+      "importance": 0.002846020823130241
+    },
+    {
+      "rank": 62,
+      "feature": "res_gyromag_wav_d3",
+      "importance": 0.0026275756822982895
+    },
+    {
+      "rank": 72,
+      "feature": "res_gyro_phase_xy",
+      "importance": 0.0021126786037230514
+    },
+    {
+      "rank": 73,
+      "feature": "res_gyro_net_z",
+      "importance": 0.002100241179356417
+    },
+    {
+      "rank": 76,
+      "feature": "res_gyromag_apen",
+      "importance": 0.0020244118748515487
+    },
+    {
+      "rank": 90,
+      "feature": "res_gyro_phase_xz",
+      "importance": 0.0016384475000376356
+    },
+    {
+      "rank": 107,
+      "feature": "res_gyromag_shape_factor",
+      "importance": 0.0013930696574519321
+    },
+    {
+      "rank": 110,
+      "feature": "res_gyro_dir_energy",
+      "importance": 0.0013676303735108333
+    },
+    {
+      "rank": 126,
+      "feature": "res_gyromag_wav_totalen",
+      "importance": 0.0011343231347699025
+    },
+    {
+      "rank": 129,
+      "feature": "res_gyromag_ac_symmetry",
+      "importance": 0.0010941264242574542
+    },
+    {
+      "rank": 157,
+      "feature": "res_accelmag_wav_totalen",
+      "importance": 0.0008724035924367516
+    },
+    {
+      "rank": 171,
+      "feature": "res_accelmag_mad",
+      "importance": 0.000787014123302292
+    },
+    {
+      "rank": 175,
+      "feature": "res_gyromag_crest_factor",
+      "importance": 0.0007576366970486327
+    },
+    {
+      "rank": 196,
+      "feature": "res_accelmag_wav_d3",
+      "importance": 0.000662241500445043
+    },
+    {
+      "rank": 209,
+      "feature": "res_accelmag_wav_entropy",
+      "importance": 0.0006143876588823577
+    },
+    {
+      "rank": 221,
+      "feature": "res_gyromag_hjorth_activity",
+      "importance": 0.0005974137384300592
+    },
+    {
+      "rank": 228,
+      "feature": "res_accelmag_hjorth_complex",
+      "importance": 0.0005822153376108691
+    },
+    {
+      "rank": 236,
+      "feature": "res_gyromag_wav_entropy",
+      "importance": 0.0005544822612300139
+    },
+    {
+      "rank": 241,
+      "feature": "res_gyromag_impulse_factor",
+      "importance": 0.0005442862836160231
+    },
+    {
+      "rank": 248,
+      "feature": "res_gyromag_wav_approx",
+      "importance": 0.0005252692599167294
+    }
+  ],
+  "verdict": "NOT worth porting \u2014 no unseen-session gain over the embedded set"
+}

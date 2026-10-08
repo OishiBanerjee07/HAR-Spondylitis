@@ -1,0 +1,22 @@
+{
+  "tBodyGyro-mean()-X": "gyro_x__mean",
+  "tBodyGyro-mean()-Y": "gyro_y__mean",
+  "tBodyGyro-mean()-Z": "gyro_z__mean",
+  "tBodyGyro-std()-X": "gyro_x__std",
+  "tBodyGyro-std()-Y": "gyro_y__std",
+  "tBodyGyro-std()-Z": "gyro_z__std",
+  "tBodyGyro-energy()-X": "gyro_x__energy",
+  "tBodyGyro-energy()-Y": "gyro_y__energy",
+  "tBodyGyro-energy()-Z": "gyro_z__energy",
+  "tBodyGyro-correlation()-X,Y": "corr__gyro_x__gyro_y",
+  "tBodyGyro-correlation()-X,Z": "corr__gyro_x__gyro_z",
+  "tBodyGyro-correlation()-Y,Z": "corr__gyro_y__gyro_z",
+  "tBodyAccMag-sma()": "tBodyAccMag-mean()",
+  "tGravityAccMag-sma()": "tGravityAccMag-mean()",
+  "tBodyAccJerkMag-sma()": "tBodyAccJerkMag-mean()",
+  "tBodyGyroMag-mean()": "gyro_mag__mean",
+  "tBodyGyroMag-std()": "gyro_mag__std",
+  "tBodyGyroMag-sma()": "gyro_mag__mean",
+  "tBodyGyroMag-energy()": "gyro_mag__energy",
+  "tBodyGyroJerkMag-sma()": "tBodyGyroJerkMag-mean()"
+}

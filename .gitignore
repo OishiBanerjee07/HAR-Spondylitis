@@ -1,0 +1,54 @@
+# =============================================================
+#  .gitignore — FINALMOD_L (HAR / IMU rotation classifier)
+#  Place at repo root. Patterns use **/ so they match in any
+#  project subfolder (e.g. newtrial2/HAR_LEFT_PCA/).
+# =============================================================
+
+# ---------- Datasets (too large for git: 29–67 MB each) ----------
+# Share via Git LFS, cloud storage, or a release asset instead.
+# HAR_4_PCA.py expects ROT_activities_master.csv next to the script.
+**/ROT_activities_master*.csv
+**/ROT_activities_master*.xls
+**/ROT_activities_master*.xlsx
+**/*.xls
+
+# ---------- Generated outputs: binary caches & models ----------
+# Rebuilt by running HAR_4_PCA.py / HAR_ROT_HIER.py.
+**/generated/*.pkl
+**/generated/*.npz
+# Kept: generated/*.json (small metrics/reports) and
+#       generated/imu_model_compact.h (firmware model export)
+
+# ---------- Logs & run output ----------
+*.log
+**/run_log.txt
+
+# ---------- Backups ----------
+*.bak
+*.orig
+*~
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+.env
+
+# ---------- Editors / IDEs ----------
+.vscode/
+.idea/
+*.swp
+
+# ---------- OS files ----------
+*:Zone.Identifier
+*Zone.Identifier
+Thumbs.db
+desktop.ini
+.DS_Store

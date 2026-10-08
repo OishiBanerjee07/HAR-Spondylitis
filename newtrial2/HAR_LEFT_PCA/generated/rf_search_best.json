@@ -1,0 +1,12 @@
+{
+  "best_val_acc": 0.8037436637372283,
+  "best_params": {
+    "clf__n_estimators": 32,
+    "clf__min_samples_split": 8,
+    "clf__min_samples_leaf": 3,
+    "clf__max_features": 0.8,
+    "clf__max_depth": 15,
+    "clf__bootstrap": true
+  },
+  "n_iter": 40
+}

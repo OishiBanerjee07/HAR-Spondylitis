@@ -1,0 +1,44 @@
+[
+  {
+    "kind": "hybrid",
+    "val": 0.8037436637372283,
+    "test": 0.9934497816593887,
+    "n_out": 80,
+    "shape": "selection"
+  },
+  {
+    "kind": "mutual_info",
+    "val": 0.7901394075583688,
+    "test": 0.980349344978166,
+    "n_out": 25,
+    "shape": "selection"
+  },
+  {
+    "kind": "rf_importance",
+    "val": 0.8001195728483758,
+    "test": 0.9868995633187773,
+    "n_out": 25,
+    "shape": "selection"
+  },
+  {
+    "kind": "rfe",
+    "val": 0.7898950557497143,
+    "test": 0.9956331877729258,
+    "n_out": 25,
+    "shape": "selection"
+  },
+  {
+    "kind": "mrmr",
+    "val": 0.7968744667081004,
+    "test": 0.9890829694323144,
+    "n_out": 25,
+    "shape": "selection"
+  },
+  {
+    "kind": "pca",
+    "val": 0.7351774249579799,
+    "test": 0.980349344978166,
+    "n_out": 20,
+    "shape": "projection"
+  }
+]

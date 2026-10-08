@@ -1,0 +1,10 @@
+{
+  "canonical-frame same-sign gyro (self)": false,
+  "threshold-on-D Direction acc >= 0.85 (got 0.597)": false,
+  "gyro_accel_energy_ratio in Head-B top-5": false,
+  "hierarchical (1.000) >= flat (1.000)": true,
+  "hierarchical >= 0.90 (got 1.000)": true,
+  "flat >= 0.90 (got 1.000)": true,
+  "Head B >= 0.92 (got 1.000) \u2014 else iterate Group B first": true,
+  "no single-session class (offenders: [])": true
+}

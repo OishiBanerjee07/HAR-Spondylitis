@@ -1,0 +1,4653 @@
+{
+  "n_pca": 80,
+  "n_candidate_pool": 213,
+  "selection": "reducer 'hybrid' \u2192 80 raw features",
+  "kept_pca_indices": [
+    1,
+    2,
+    8,
+    9,
+    10,
+    17,
+    18,
+    24,
+    26,
+    27,
+    28,
+    32,
+    34,
+    35,
+    36,
+    42,
+    43,
+    44,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    58,
+    59,
+    60,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    102,
+    108,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120,
+    126,
+    148,
+    161,
+    164,
+    186,
+    232,
+    233,
+    246,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    309,
+    310,
+    311,
+    370,
+    371,
+    381,
+    382,
+    383,
+    385,
+    406,
+    480,
+    481,
+    482,
+    533,
+    546
+  ],
+  "n_stat_features": 560,
+  "variance_retained": 0.1436265706225715,
+  "pca_components_ranked": [
+    {
+      "pca_index": 385,
+      "model_dim": 73,
+      "rank": 0,
+      "rf_importance": 0.09139084877374405,
+      "explained_variance_ratio": 0.00179533221505273,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerkMag-entropy()",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 32,
+      "model_dim": 11,
+      "rank": 1,
+      "rf_importance": 0.08673981085716118,
+      "explained_variance_ratio": 0.0017953320562914972,
+      "top_features": [
+        {
+          "name": "gyro_y__mean",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 8,
+      "model_dim": 2,
+      "rank": 2,
+      "rf_importance": 0.0785021480724469,
+      "explained_variance_ratio": 0.0017953321094446673,
+      "top_features": [
+        {
+          "name": "accel_y__mean",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 24,
+      "model_dim": 7,
+      "rank": 3,
+      "rf_importance": 0.06795080911306971,
+      "explained_variance_ratio": 0.0017953321441096296,
+      "top_features": [
+        {
+          "name": "gyro_x__mean",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 382,
+      "model_dim": 71,
+      "rank": 4,
+      "rf_importance": 0.05720960729012922,
+      "explained_variance_ratio": 0.0017953322781966768,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerkMag-min()",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 1,
+      "model_dim": 0,
+      "rank": 5,
+      "rf_importance": 0.04969129957579882,
+      "explained_variance_ratio": 0.0017953320294300376,
+      "top_features": [
+        {
+          "name": "accel_x__std",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 69,
+      "model_dim": 33,
+      "rank": 6,
+      "rf_importance": 0.03636248018748693,
+      "explained_variance_ratio": 0.00179533231169455,
+      "top_features": [
+        {
+          "name": "corr__gyro_y__gyro_z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 186,
+      "model_dim": 46,
+      "rank": 7,
+      "rf_importance": 0.034243632057578244,
+      "explained_variance_ratio": 0.0017953321745465365,
+      "top_features": [
+        {
+          "name": "tGravityAcc-mean()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 17,
+      "model_dim": 5,
+      "rank": 8,
+      "rf_importance": 0.03304333768281835,
+      "explained_variance_ratio": 0.0017953321810895144,
+      "top_features": [
+        {
+          "name": "accel_z__std",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 164,
+      "model_dim": 45,
+      "rank": 9,
+      "rf_importance": 0.030033996809859857,
+      "explained_variance_ratio": 0.0017953321190845525,
+      "top_features": [
+        {
+          "name": "tBodyAcc-iqr()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 65,
+      "model_dim": 29,
+      "rank": 10,
+      "rf_importance": 0.029849342069510475,
+      "explained_variance_ratio": 0.0017953322852588272,
+      "top_features": [
+        {
+          "name": "corr__accel_x__accel_z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 68,
+      "model_dim": 32,
+      "rank": 11,
+      "rf_importance": 0.028952822728209142,
+      "explained_variance_ratio": 0.0017953322297552974,
+      "top_features": [
+        {
+          "name": "corr__gyro_x__gyro_z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 269,
+      "model_dim": 51,
+      "rank": 12,
+      "rf_importance": 0.02441558935145781,
+      "explained_variance_ratio": 0.001795332142892275,
+      "top_features": [
+        {
+          "name": "tBodyGyro-max()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 271,
+      "model_dim": 53,
+      "rank": 13,
+      "rf_importance": 0.01497922446771591,
+      "explained_variance_ratio": 0.0017953320576712857,
+      "top_features": [
+        {
+          "name": "tBodyGyro-min()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 268,
+      "model_dim": 50,
+      "rank": 14,
+      "rf_importance": 0.01426302159839514,
+      "explained_variance_ratio": 0.0017953320311403216,
+      "top_features": [
+        {
+          "name": "tBodyGyro-max()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 533,
+      "model_dim": 78,
+      "rank": 15,
+      "rf_importance": 0.014125393026495533,
+      "explained_variance_ratio": 0.0017953322042088234,
+      "top_features": [
+        {
+          "name": "fBodyBodyGyroMag-energy()",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 67,
+      "model_dim": 31,
+      "rank": 16,
+      "rf_importance": 0.01324016720134175,
+      "explained_variance_ratio": 0.0017953319658942832,
+      "top_features": [
+        {
+          "name": "corr__gyro_x__gyro_y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 66,
+      "model_dim": 30,
+      "rank": 17,
+      "rf_importance": 0.012753511096841601,
+      "explained_variance_ratio": 0.0017953320293829724,
+      "top_features": [
+        {
+          "name": "corr__accel_y__accel_z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 148,
+      "model_dim": 43,
+      "rank": 18,
+      "rf_importance": 0.012649636120743832,
+      "explained_variance_ratio": 0.0017953321365251993,
+      "top_features": [
+        {
+          "name": "tBodyAcc-std()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 64,
+      "model_dim": 28,
+      "rank": 19,
+      "rf_importance": 0.012570938493170742,
+      "explained_variance_ratio": 0.0017953321748147622,
+      "top_features": [
+        {
+          "name": "corr__accel_x__accel_y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 406,
+      "model_dim": 74,
+      "rank": 20,
+      "rf_importance": 0.01219715450683822,
+      "explained_variance_ratio": 0.0017953319830384608,
+      "top_features": [
+        {
+          "name": "fBodyAcc-energy()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 300,
+      "model_dim": 57,
+      "rank": 21,
+      "rf_importance": 0.010830961518602005,
+      "explained_variance_ratio": 0.0017953321962774881,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-mad()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 9,
+      "model_dim": 3,
+      "rank": 22,
+      "rf_importance": 0.010137852781427252,
+      "explained_variance_ratio": 0.0017953319683731521,
+      "top_features": [
+        {
+          "name": "accel_y__std",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 304,
+      "model_dim": 61,
+      "rank": 23,
+      "rf_importance": 0.010091466179846685,
+      "explained_variance_ratio": 0.0017953321154859823,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-max()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 272,
+      "model_dim": 54,
+      "rank": 24,
+      "rf_importance": 0.009845968025637593,
+      "explained_variance_ratio": 0.0017953320241359634,
+      "top_features": [
+        {
+          "name": "tBodyGyro-min()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 371,
+      "model_dim": 69,
+      "rank": 25,
+      "rf_importance": 0.009730533342070587,
+      "explained_variance_ratio": 0.0017953320865733919,
+      "top_features": [
+        {
+          "name": "tBodyGyroMag-min()",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 161,
+      "model_dim": 44,
+      "rank": 26,
+      "rf_importance": 0.008735587053392745,
+      "explained_variance_ratio": 0.0017953320334111386,
+      "top_features": [
+        {
+          "name": "tBodyAcc-energy()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 299,
+      "model_dim": 56,
+      "rank": 27,
+      "rf_importance": 0.00761660869256647,
+      "explained_variance_ratio": 0.001795332217656726,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-mad()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 301,
+      "model_dim": 58,
+      "rank": 28,
+      "rf_importance": 0.007550039951806671,
+      "explained_variance_ratio": 0.0017953321493858019,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-mad()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 44,
+      "model_dim": 17,
+      "rank": 29,
+      "rf_importance": 0.0071920567444017985,
+      "explained_variance_ratio": 0.0017953321605809708,
+      "top_features": [
+        {
+          "name": "gyro_z__energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 311,
+      "model_dim": 67,
+      "rank": 30,
+      "rf_importance": 0.00708496279453056,
+      "explained_variance_ratio": 0.0017953321263054509,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-energy()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 270,
+      "model_dim": 52,
+      "rank": 31,
+      "rf_importance": 0.00695648253200646,
+      "explained_variance_ratio": 0.0017953321805699164,
+      "top_features": [
+        {
+          "name": "tBodyGyro-max()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 273,
+      "model_dim": 55,
+      "rank": 32,
+      "rf_importance": 0.006820101121536324,
+      "explained_variance_ratio": 0.001795332167970126,
+      "top_features": [
+        {
+          "name": "tBodyGyro-min()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 246,
+      "model_dim": 49,
+      "rank": 33,
+      "rf_importance": 0.00631541645603633,
+      "explained_variance_ratio": 0.0017953322671432957,
+      "top_features": [
+        {
+          "name": "tBodyAccJerk-iqr()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 482,
+      "model_dim": 77,
+      "rank": 34,
+      "rf_importance": 0.005878675914246391,
+      "explained_variance_ratio": 0.00179533206566322,
+      "top_features": [
+        {
+          "name": "fBodyGyro-energy()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 233,
+      "model_dim": 48,
+      "rank": 35,
+      "rf_importance": 0.005777514649475441,
+      "explained_variance_ratio": 0.0017953322110187257,
+      "top_features": [
+        {
+          "name": "tBodyAccJerk-mad()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 49,
+      "model_dim": 19,
+      "rank": 36,
+      "rf_importance": 0.005544325576730103,
+      "explained_variance_ratio": 0.001795332220959789,
+      "top_features": [
+        {
+          "name": "accel_mag__std",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 43,
+      "model_dim": 16,
+      "rank": 37,
+      "rf_importance": 0.005462037700509669,
+      "explained_variance_ratio": 0.0017953323016971013,
+      "top_features": [
+        {
+          "name": "gyro_z__rms",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 310,
+      "model_dim": 66,
+      "rank": 38,
+      "rf_importance": 0.005386624925788137,
+      "explained_variance_ratio": 0.0017953319908293023,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-energy()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 54,
+      "model_dim": 24,
+      "rank": 39,
+      "rf_importance": 0.005301615236124679,
+      "explained_variance_ratio": 0.0017953321322674801,
+      "top_features": [
+        {
+          "name": "accel_mag__kurt",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 302,
+      "model_dim": 59,
+      "rank": 40,
+      "rf_importance": 0.004484179076801329,
+      "explained_variance_ratio": 0.001795332112021392,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-max()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 34,
+      "model_dim": 12,
+      "rank": 41,
+      "rf_importance": 0.004321354041187263,
+      "explained_variance_ratio": 0.0017953322487038717,
+      "top_features": [
+        {
+          "name": "gyro_y__range",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 232,
+      "model_dim": 47,
+      "rank": 42,
+      "rf_importance": 0.004228062818798392,
+      "explained_variance_ratio": 0.0017953320089019748,
+      "top_features": [
+        {
+          "name": "tBodyAccJerk-mad()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 10,
+      "model_dim": 4,
+      "rank": 43,
+      "rf_importance": 0.004211632530982461,
+      "explained_variance_ratio": 0.0017953321066257687,
+      "top_features": [
+        {
+          "name": "accel_y__range",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 303,
+      "model_dim": 60,
+      "rank": 44,
+      "rf_importance": 0.0041617120409683985,
+      "explained_variance_ratio": 0.0017953321443455134,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-max()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 481,
+      "model_dim": 76,
+      "rank": 45,
+      "rf_importance": 0.004096209196223731,
+      "explained_variance_ratio": 0.0017953321348374073,
+      "top_features": [
+        {
+          "name": "fBodyGyro-energy()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 59,
+      "model_dim": 26,
+      "rank": 46,
+      "rf_importance": 0.0040700078129280405,
+      "explained_variance_ratio": 0.0017953320470239973,
+      "top_features": [
+        {
+          "name": "gyro_mag__rms",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 383,
+      "model_dim": 72,
+      "rank": 47,
+      "rf_importance": 0.004011705957729724,
+      "explained_variance_ratio": 0.0017953320828098167,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerkMag-energy()",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 53,
+      "model_dim": 23,
+      "rank": 48,
+      "rf_importance": 0.003913161752121504,
+      "explained_variance_ratio": 0.0017953321966438084,
+      "top_features": [
+        {
+          "name": "accel_mag__skew",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 108,
+      "model_dim": 35,
+      "rank": 49,
+      "rf_importance": 0.0037967670191005947,
+      "explained_variance_ratio": 0.0017953320086647627,
+      "top_features": [
+        {
+          "name": "gyro_y__fft_energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 102,
+      "model_dim": 34,
+      "rank": 50,
+      "rf_importance": 0.0036838520570593356,
+      "explained_variance_ratio": 0.0017953320249984236,
+      "top_features": [
+        {
+          "name": "gyro_x__fft_energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 60,
+      "model_dim": 27,
+      "rank": 51,
+      "rf_importance": 0.0034826024083084986,
+      "explained_variance_ratio": 0.0017953320446286987,
+      "top_features": [
+        {
+          "name": "gyro_mag__energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 28,
+      "model_dim": 10,
+      "rank": 52,
+      "rf_importance": 0.0034509197865673314,
+      "explained_variance_ratio": 0.0017953321446584692,
+      "top_features": [
+        {
+          "name": "gyro_x__energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 126,
+      "model_dim": 42,
+      "rank": 53,
+      "rf_importance": 0.00341568107167948,
+      "explained_variance_ratio": 0.0017953322711730122,
+      "top_features": [
+        {
+          "name": "gyro_mag__fft_energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 307,
+      "model_dim": 64,
+      "rank": 54,
+      "rf_importance": 0.0034078993717411845,
+      "explained_variance_ratio": 0.0017953321820169891,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-min()-Z",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 480,
+      "model_dim": 75,
+      "rank": 55,
+      "rf_importance": 0.0033784683345342574,
+      "explained_variance_ratio": 0.0017953321844582384,
+      "top_features": [
+        {
+          "name": "fBodyGyro-energy()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 2,
+      "model_dim": 1,
+      "rank": 56,
+      "rf_importance": 0.003275336004042397,
+      "explained_variance_ratio": 0.0017953321990373048,
+      "top_features": [
+        {
+          "name": "accel_x__range",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 120,
+      "model_dim": 41,
+      "rank": 57,
+      "rf_importance": 0.0032693656051783217,
+      "explained_variance_ratio": 0.0017953320048705798,
+      "top_features": [
+        {
+          "name": "accel_mag__fft_energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 18,
+      "model_dim": 6,
+      "rank": 58,
+      "rf_importance": 0.002779355481243264,
+      "explained_variance_ratio": 0.0017953321604346453,
+      "top_features": [
+        {
+          "name": "accel_z__range",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 118,
+      "model_dim": 39,
+      "rank": 59,
+      "rf_importance": 0.002456390807879119,
+      "explained_variance_ratio": 0.0017953320812425244,
+      "top_features": [
+        {
+          "name": "accel_mag__fft_spread",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 381,
+      "model_dim": 70,
+      "rank": 60,
+      "rf_importance": 0.0024527930688216753,
+      "explained_variance_ratio": 0.0017953320763891521,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerkMag-max()",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 114,
+      "model_dim": 36,
+      "rank": 61,
+      "rf_importance": 0.0020905425128115085,
+      "explained_variance_ratio": 0.0017953320299166073,
+      "top_features": [
+        {
+          "name": "gyro_z__fft_energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 309,
+      "model_dim": 65,
+      "rank": 62,
+      "rf_importance": 0.0020048320670382662,
+      "explained_variance_ratio": 0.0017953321215403559,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-energy()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 27,
+      "model_dim": 9,
+      "rank": 63,
+      "rf_importance": 0.0019498552509343364,
+      "explained_variance_ratio": 0.0017953320675306757,
+      "top_features": [
+        {
+          "name": "gyro_x__rms",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 370,
+      "model_dim": 68,
+      "rank": 64,
+      "rf_importance": 0.0019237415404119002,
+      "explained_variance_ratio": 0.001795332203437696,
+      "top_features": [
+        {
+          "name": "tBodyGyroMag-max()",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 306,
+      "model_dim": 63,
+      "rank": 65,
+      "rf_importance": 0.0018859466059461686,
+      "explained_variance_ratio": 0.001795332066873959,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-min()-Y",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 35,
+      "model_dim": 13,
+      "rank": 66,
+      "rf_importance": 0.0017694330130281785,
+      "explained_variance_ratio": 0.0017953321411555035,
+      "top_features": [
+        {
+          "name": "gyro_y__rms",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 117,
+      "model_dim": 38,
+      "rank": 67,
+      "rf_importance": 0.0016592260588164755,
+      "explained_variance_ratio": 0.0017953321549620056,
+      "top_features": [
+        {
+          "name": "accel_mag__fft_centroid",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 58,
+      "model_dim": 25,
+      "rank": 68,
+      "rf_importance": 0.0016471972254538767,
+      "explained_variance_ratio": 0.0017953322502805658,
+      "top_features": [
+        {
+          "name": "gyro_mag__range",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 36,
+      "model_dim": 14,
+      "rank": 69,
+      "rf_importance": 0.0015807381074397536,
+      "explained_variance_ratio": 0.0017953321484632317,
+      "top_features": [
+        {
+          "name": "gyro_y__energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 116,
+      "model_dim": 37,
+      "rank": 70,
+      "rf_importance": 0.0015132841765784486,
+      "explained_variance_ratio": 0.00179533209158049,
+      "top_features": [
+        {
+          "name": "accel_mag__fft_dommag",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 48,
+      "model_dim": 18,
+      "rank": 71,
+      "rf_importance": 0.0014990628349538996,
+      "explained_variance_ratio": 0.0017953320814540889,
+      "top_features": [
+        {
+          "name": "accel_mag__mean",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 26,
+      "model_dim": 8,
+      "rank": 72,
+      "rf_importance": 0.001363058562163388,
+      "explained_variance_ratio": 0.0017953322535033355,
+      "top_features": [
+        {
+          "name": "gyro_x__range",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 42,
+      "model_dim": 15,
+      "rank": 73,
+      "rf_importance": 0.0011163744514360733,
+      "explained_variance_ratio": 0.0017953321100201334,
+      "top_features": [
+        {
+          "name": "gyro_z__range",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 50,
+      "model_dim": 20,
+      "rank": 74,
+      "rf_importance": 0.000981669689824231,
+      "explained_variance_ratio": 0.001795332173002866,
+      "top_features": [
+        {
+          "name": "accel_mag__range",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 51,
+      "model_dim": 21,
+      "rank": 75,
+      "rf_importance": 0.000841962792874133,
+      "explained_variance_ratio": 0.0017953322658780567,
+      "top_features": [
+        {
+          "name": "accel_mag__rms",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 305,
+      "model_dim": 62,
+      "rank": 76,
+      "rf_importance": 0.0007729508794378562,
+      "explained_variance_ratio": 0.0017953320967646206,
+      "top_features": [
+        {
+          "name": "tBodyGyroJerk-min()-X",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 119,
+      "model_dim": 40,
+      "rank": 77,
+      "rf_importance": 0.0005753184509531885,
+      "explained_variance_ratio": 0.0017953321872870157,
+      "top_features": [
+        {
+          "name": "accel_mag__fft_entropy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 546,
+      "model_dim": 79,
+      "rank": 78,
+      "rf_importance": 0.0005436262287167202,
+      "explained_variance_ratio": 0.0017953321502779266,
+      "top_features": [
+        {
+          "name": "fBodyBodyGyroJerkMag-energy()",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Z,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    },
+    {
+      "pca_index": 52,
+      "model_dim": 22,
+      "rank": 79,
+      "rf_importance": 0.0005101210297359776,
+      "explained_variance_ratio": 0.0017953320883280883,
+      "top_features": [
+        {
+          "name": "accel_mag__energy",
+          "loading": 1.0
+        },
+        {
+          "name": "angle(Y,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(X,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroJerkMean,gravityMean)",
+          "loading": 0.0
+        },
+        {
+          "name": "angle(tBodyGyroMean,gravityMean)",
+          "loading": 0.0
+        }
+      ]
+    }
+  ],
+  "feature_influence": [
+    {
+      "name": "tBodyGyroJerkMag-entropy()",
+      "influence": 0.09139084877365265
+    },
+    {
+      "name": "gyro_y__mean",
+      "influence": 0.08673981085707443
+    },
+    {
+      "name": "accel_y__mean",
+      "influence": 0.0785021480723684
+    },
+    {
+      "name": "gyro_x__mean",
+      "influence": 0.06795080911300175
+    },
+    {
+      "name": "tBodyGyroJerkMag-min()",
+      "influence": 0.057209607290072004
+    },
+    {
+      "name": "accel_x__std",
+      "influence": 0.04969129957574912
+    },
+    {
+      "name": "corr__gyro_y__gyro_z",
+      "influence": 0.036362480187450565
+    },
+    {
+      "name": "tGravityAcc-mean()-Y",
+      "influence": 0.034243632057544
+    },
+    {
+      "name": "accel_z__std",
+      "influence": 0.033043337682785306
+    },
+    {
+      "name": "tBodyAcc-iqr()-X",
+      "influence": 0.03003399680982982
+    },
+    {
+      "name": "corr__accel_x__accel_z",
+      "influence": 0.029849342069480624
+    },
+    {
+      "name": "corr__gyro_x__gyro_z",
+      "influence": 0.028952822728180186
+    },
+    {
+      "name": "tBodyGyro-max()-Y",
+      "influence": 0.02441558935143339
+    },
+    {
+      "name": "tBodyGyro-min()-X",
+      "influence": 0.01497922446770093
+    },
+    {
+      "name": "tBodyGyro-max()-X",
+      "influence": 0.014263021598380875
+    },
+    {
+      "name": "fBodyBodyGyroMag-energy()",
+      "influence": 0.014125393026481407
+    },
+    {
+      "name": "corr__gyro_x__gyro_y",
+      "influence": 0.013240167201328508
+    },
+    {
+      "name": "corr__accel_y__accel_z",
+      "influence": 0.012753511096828846
+    },
+    {
+      "name": "tBodyAcc-std()-X",
+      "influence": 0.01264963612073118
+    },
+    {
+      "name": "corr__accel_x__accel_y",
+      "influence": 0.01257093849315817
+    },
+    {
+      "name": "fBodyAcc-energy()-X",
+      "influence": 0.012197154506826022
+    },
+    {
+      "name": "tBodyGyroJerk-mad()-Y",
+      "influence": 0.010830961518591174
+    },
+    {
+      "name": "accel_y__std",
+      "influence": 0.010137852781417113
+    },
+    {
+      "name": "tBodyGyroJerk-max()-Z",
+      "influence": 0.010091466179836592
+    },
+    {
+      "name": "tBodyGyro-min()-Y",
+      "influence": 0.009845968025627747
+    },
+    {
+      "name": "tBodyGyroMag-min()",
+      "influence": 0.009730533342060855
+    },
+    {
+      "name": "tBodyAcc-energy()-X",
+      "influence": 0.008735587053384009
+    },
+    {
+      "name": "tBodyGyroJerk-mad()-X",
+      "influence": 0.007616608692558853
+    },
+    {
+      "name": "tBodyGyroJerk-mad()-Z",
+      "influence": 0.007550039951799121
+    },
+    {
+      "name": "gyro_z__energy",
+      "influence": 0.0071920567443946055
+    },
+    {
+      "name": "tBodyGyroJerk-energy()-Z",
+      "influence": 0.007084962794523474
+    },
+    {
+      "name": "tBodyGyro-max()-Z",
+      "influence": 0.0069564825319995026
+    },
+    {
+      "name": "tBodyGyro-min()-Z",
+      "influence": 0.006820101121529503
+    },
+    {
+      "name": "tBodyAccJerk-iqr()-Z",
+      "influence": 0.006315416456030014
+    },
+    {
+      "name": "fBodyGyro-energy()-Z",
+      "influence": 0.005878675914240512
+    },
+    {
+      "name": "tBodyAccJerk-mad()-Z",
+      "influence": 0.005777514649469663
+    },
+    {
+      "name": "accel_mag__std",
+      "influence": 0.005544325576724558
+    },
+    {
+      "name": "gyro_z__rms",
+      "influence": 0.005462037700504206
+    },
+    {
+      "name": "tBodyGyroJerk-energy()-Y",
+      "influence": 0.0053866249257827495
+    },
+    {
+      "name": "accel_mag__kurt",
+      "influence": 0.005301615236119377
+    },
+    {
+      "name": "tBodyGyroJerk-max()-X",
+      "influence": 0.0044841790767968445
+    },
+    {
+      "name": "gyro_y__range",
+      "influence": 0.004321354041182941
+    },
+    {
+      "name": "tBodyAccJerk-mad()-Y",
+      "influence": 0.004228062818794164
+    },
+    {
+      "name": "accel_y__range",
+      "influence": 0.004211632530978249
+    },
+    {
+      "name": "tBodyGyroJerk-max()-Y",
+      "influence": 0.004161712040964236
+    },
+    {
+      "name": "fBodyGyro-energy()-Y",
+      "influence": 0.004096209196219634
+    },
+    {
+      "name": "gyro_mag__rms",
+      "influence": 0.00407000781292397
+    },
+    {
+      "name": "tBodyGyroJerkMag-energy()",
+      "influence": 0.004011705957725711
+    },
+    {
+      "name": "accel_mag__skew",
+      "influence": 0.0039131617521175905
+    },
+    {
+      "name": "gyro_y__fft_energy",
+      "influence": 0.0037967670190967974
+    },
+    {
+      "name": "gyro_x__fft_energy",
+      "influence": 0.0036838520570556515
+    },
+    {
+      "name": "gyro_mag__energy",
+      "influence": 0.0034826024083050157
+    },
+    {
+      "name": "gyro_x__energy",
+      "influence": 0.00345091978656388
+    },
+    {
+      "name": "gyro_mag__fft_energy",
+      "influence": 0.003415681071676064
+    },
+    {
+      "name": "tBodyGyroJerk-min()-Z",
+      "influence": 0.0034078993717377762
+    },
+    {
+      "name": "fBodyGyro-energy()-X",
+      "influence": 0.0033784683345308786
+    },
+    {
+      "name": "accel_x__range",
+      "influence": 0.0032753360040391213
+    },
+    {
+      "name": "accel_mag__fft_energy",
+      "influence": 0.003269365605175052
+    },
+    {
+      "name": "accel_z__range",
+      "influence": 0.0027793554812404844
+    },
+    {
+      "name": "accel_mag__fft_spread",
+      "influence": 0.0024563908078766624
+    },
+    {
+      "name": "tBodyGyroJerkMag-max()",
+      "influence": 0.0024527930688192224
+    },
+    {
+      "name": "gyro_z__fft_energy",
+      "influence": 0.0020905425128094177
+    },
+    {
+      "name": "tBodyGyroJerk-energy()-X",
+      "influence": 0.0020048320670362613
+    },
+    {
+      "name": "gyro_x__rms",
+      "influence": 0.0019498552509323863
+    },
+    {
+      "name": "tBodyGyroMag-max()",
+      "influence": 0.0019237415404099764
+    },
+    {
+      "name": "tBodyGyroJerk-min()-Y",
+      "influence": 0.0018859466059442825
+    },
+    {
+      "name": "gyro_y__rms",
+      "influence": 0.0017694330130264089
+    },
+    {
+      "name": "accel_mag__fft_centroid",
+      "influence": 0.001659226058814816
+    },
+    {
+      "name": "gyro_mag__range",
+      "influence": 0.0016471972254522294
+    },
+    {
+      "name": "gyro_y__energy",
+      "influence": 0.0015807381074381727
+    },
+    {
+      "name": "accel_mag__fft_dommag",
+      "influence": 0.0015132841765769353
+    },
+    {
+      "name": "accel_mag__mean",
+      "influence": 0.0014990628349524004
+    },
+    {
+      "name": "gyro_x__range",
+      "influence": 0.0013630585621620247
+    },
+    {
+      "name": "gyro_z__range",
+      "influence": 0.0011163744514349567
+    },
+    {
+      "name": "accel_mag__range",
+      "influence": 0.0009816696898232492
+    },
+    {
+      "name": "accel_mag__rms",
+      "influence": 0.000841962792873291
+    },
+    {
+      "name": "tBodyGyroJerk-min()-X",
+      "influence": 0.0007729508794370832
+    },
+    {
+      "name": "accel_mag__fft_entropy",
+      "influence": 0.0005753184509526132
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-energy()",
+      "influence": 0.0005436262287161765
+    },
+    {
+      "name": "accel_mag__energy",
+      "influence": 0.0005101210297354674
+    },
+    {
+      "name": "fBodyAccMag-mean()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-kurtosis()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-kurtosis()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-kurtosis()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-skewness()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-skewness()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-skewness()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-meanFreq()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-meanFreq()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-meanFreq()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-maxInds-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-maxInds-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-maxInds-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-entropy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-entropy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-entropy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-iqr()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-iqr()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-iqr()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-min()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-min()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-min()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-max()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-max()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-max()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-mad()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-mad()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-mad()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-std()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-std()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-std()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-mean()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-mean()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyGyro-mean()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-kurtosis()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-kurtosis()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-kurtosis()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-skewness()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-skewness()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-skewness()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-meanFreq()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-meanFreq()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-meanFreq()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-maxInds-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-maxInds-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-maxInds-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-entropy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-entropy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-entropy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-iqr()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-iqr()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-iqr()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-energy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-energy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-energy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-min()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-min()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-min()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-max()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-max()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-max()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-mad()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-mad()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-mad()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-std()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-std()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-std()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-mean()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-mean()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccJerk-mean()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-kurtosis()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-kurtosis()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-kurtosis()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-skewness()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-skewness()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-skewness()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-meanFreq()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-meanFreq()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-meanFreq()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-maxInds-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-maxInds-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-maxInds-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-entropy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-entropy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-entropy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-iqr()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-iqr()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-iqr()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-energy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-energy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-min()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-min()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-min()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-max()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-max()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-max()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-mad()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-mad()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-mad()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-std()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-std()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-std()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-mean()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-mean()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAcc-mean()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerkMag-arCoeff()4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerkMag-arCoeff()3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerkMag-arCoeff()2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerkMag-arCoeff()1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerkMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerkMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerkMag-std()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerkMag-mean()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroMag-arCoeff()4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroMag-arCoeff()3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroMag-arCoeff()2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroMag-arCoeff()1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroMag-entropy()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-arCoeff()4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-arCoeff()3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-arCoeff()2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-arCoeff()1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-entropy()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-energy()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-min()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-max()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-std()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerkMag-mean()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-arCoeff()4",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-arCoeff()3",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-arCoeff()2",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-arCoeff()1",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-entropy()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-energy()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-min()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-max()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-std()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAccMag-mean()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-arCoeff()4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-arCoeff()3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-arCoeff()2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-arCoeff()1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-entropy()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-energy()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-min()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-max()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-std()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccMag-mean()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-correlation()-Y,Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-correlation()-X,Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-correlation()-X,Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-Z,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-Z,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-Z,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-Z,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-Y,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-Y,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-Y,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-Y,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-X,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-X,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-X,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-arCoeff()-X,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-entropy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-entropy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-entropy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-iqr()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-iqr()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-iqr()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-std()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-std()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-std()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-mean()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-mean()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyroJerk-mean()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-Z,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-Z,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-Z,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-Z,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-Y,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-Y,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-Y,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-Y,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-X,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-X,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-X,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-arCoeff()-X,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-entropy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-entropy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-entropy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-iqr()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-iqr()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-iqr()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "angle(Z,gravityMean)",
+      "influence": 0.0
+    },
+    {
+      "name": "angle(Y,gravityMean)",
+      "influence": 0.0
+    },
+    {
+      "name": "angle(X,gravityMean)",
+      "influence": 0.0
+    },
+    {
+      "name": "angle(tBodyGyroJerkMean,gravityMean)",
+      "influence": 0.0
+    },
+    {
+      "name": "angle(tBodyGyroMean,gravityMean)",
+      "influence": 0.0
+    },
+    {
+      "name": "angle(tBodyAccJerkMean,gravityMean)",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-mad()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-mad()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyGyro-mad()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-correlation()-Y,Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-correlation()-X,Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-correlation()-X,Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-Z,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-Z,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-Z,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-Z,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-Y,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-Y,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-Y,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-Y,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-X,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-X,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-X,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-arCoeff()-X,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-entropy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-entropy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-entropy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "angle(tBodyAccMean,gravity)",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-iqr()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-iqr()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-energy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-energy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-energy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-min()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-min()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-min()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-max()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-max()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-max()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-kurtosis()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-skewness()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-mad()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-std()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-std()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-std()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-mean()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-mean()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAccJerk-mean()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-correlation()-Y,Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-correlation()-X,Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-correlation()-X,Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-Z,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-Z,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-Z,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-Z,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-Y,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-Y,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-Y,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-Y,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-X,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-X,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-X,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-arCoeff()-X,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-entropy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-entropy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-entropy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-iqr()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-iqr()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-iqr()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-energy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-energy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-energy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-min()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-min()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-min()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-max()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-max()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-max()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-mad()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-mad()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-mad()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-std()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-std()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-std()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-mean()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-meanFreq()",
+      "influence": 0.0
+    },
+    {
+      "name": "tGravityAcc-mean()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-correlation()-Y,Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-correlation()-X,Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-correlation()-X,Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-Z,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-Z,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-Z,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-Z,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-Y,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-Y,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-Y,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-Y,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-X,4",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-X,3",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-X,2",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-arCoeff()-X,1",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-entropy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-entropy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-entropy()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-iqr()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-iqr()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-maxInds",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-energy()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-energy()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-entropy()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-min()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-min()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-min()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-max()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-max()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-max()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-mad()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-mad()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-mad()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-std()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-std()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-mean()-Z",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-mean()-Y",
+      "influence": 0.0
+    },
+    {
+      "name": "tBodyAcc-mean()-X",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__fft_energy",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__fft_energy",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__fft_energy",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-min()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-max()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-std()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroJerkMag-mean()",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_mag__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-kurtosis()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-skewness()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-meanFreq()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__fft_energy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__fft_energy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__fft_energy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__fft_entropy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__fft_spread",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__fft_centroid",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__fft_dommag",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__fft_domfreq",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__rms",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__std",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_z__mean",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__rms",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__std",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_y__mean",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__rms",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__std",
+      "influence": 0.0
+    },
+    {
+      "name": "jerk_x__mean",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-maxInds",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-entropy()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-min()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-max()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__zcr",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__kurt",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__skew",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-std()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyGyroMag-mean()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__std",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_mag__mean",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_mag__zcr",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-kurtosis()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-skewness()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-meanFreq()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-maxInds",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-entropy()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-energy()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__zcr",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__kurt",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__skew",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-min()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-max()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__std",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_z__mean",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__zcr",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__kurt",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__skew",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-std()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyBodyAccJerkMag-mean()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_y__std",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-kurtosis()",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__zcr",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__kurt",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__skew",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-skewness()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-meanFreq()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-maxInds",
+      "influence": 0.0
+    },
+    {
+      "name": "gyro_x__std",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-entropy()",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__zcr",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__kurt",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__skew",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__energy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__rms",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-iqr()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-energy()",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_z__mean",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__zcr",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__kurt",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__skew",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__energy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_y__rms",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-sma()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-min()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-max()",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__zcr",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__kurt",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__skew",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__energy",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__rms",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-mad()",
+      "influence": 0.0
+    },
+    {
+      "name": "fBodyAccMag-std()",
+      "influence": 0.0
+    },
+    {
+      "name": "accel_x__mean",
+      "influence": 0.0
+    }
+  ]
+}

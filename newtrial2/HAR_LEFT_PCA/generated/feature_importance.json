@@ -1,0 +1,1011 @@
+{
+  "top100": [
+    {
+      "feature": "gyro_y__mean",
+      "importance": 0.28951965065502183,
+      "std": 0.01206615884685423
+    },
+    {
+      "feature": "tBodyGyroJerkMag-entropy()",
+      "importance": 0.16572052401746723,
+      "std": 0.005321422535787753
+    },
+    {
+      "feature": "accel_y__mean",
+      "importance": 0.1318777292576419,
+      "std": 0.0070885078955231105
+    },
+    {
+      "feature": "gyro_x__mean",
+      "importance": 0.09716157205240172,
+      "std": 0.00463170380689877
+    },
+    {
+      "feature": "tBodyGyro-max()-Y",
+      "importance": 0.0930131004366812,
+      "std": 0.005276439289779313
+    },
+    {
+      "feature": "corr__gyro_y__gyro_z",
+      "importance": 0.051965065502183404,
+      "std": 0.004233781534861403
+    },
+    {
+      "feature": "accel_z__std",
+      "importance": 0.04890829694323144,
+      "std": 0.003267823045217416
+    },
+    {
+      "feature": "corr__gyro_x__gyro_z",
+      "importance": 0.03602620087336241,
+      "std": 0.004199865515648795
+    },
+    {
+      "feature": "fBodyBodyGyroMag-energy()",
+      "importance": 0.015938864628820947,
+      "std": 0.0014808580749181858
+    },
+    {
+      "feature": "corr__accel_x__accel_z",
+      "importance": 0.012882096069869009,
+      "std": 0.0010696461758878668
+    },
+    {
+      "feature": "accel_x__std",
+      "importance": 0.01266375545851528,
+      "std": 0.0020248075317676243
+    },
+    {
+      "feature": "tBodyAcc-iqr()-X",
+      "importance": 0.010480349344978124,
+      "std": 0.0025462672029892375
+    },
+    {
+      "feature": "tBodyGyroJerkMag-min()",
+      "importance": 0.008951965065502155,
+      "std": 0.0012731336014946235
+    },
+    {
+      "feature": "tBodyGyro-min()-Y",
+      "importance": 0.0065502183406113135,
+      "std": 0.0006904536375913333
+    },
+    {
+      "feature": "corr__accel_y__accel_z",
+      "importance": 0.00545851528384278,
+      "std": 0.0006904536375913333
+    },
+    {
+      "feature": "fBodyGyro-energy()-Z",
+      "importance": 0.00480349344978166,
+      "std": 0.000873362445414827
+    },
+    {
+      "feature": "tBodyGyroJerk-energy()-Z",
+      "importance": 0.003930131004366832,
+      "std": 0.000534823087943913
+    },
+    {
+      "feature": "tBodyGyroMag-min()",
+      "importance": 0.003930131004366811,
+      "std": 0.0008733624454148715
+    },
+    {
+      "feature": "tGravityAcc-mean()-Y",
+      "importance": 0.003930131004366811,
+      "std": 0.0022479541792547906
+    },
+    {
+      "feature": "accel_mag__kurt",
+      "importance": 0.0030567685589519833,
+      "std": 0.0004366812227074579
+    },
+    {
+      "feature": "tBodyGyroJerk-mad()-Y",
+      "importance": 0.003056768558951961,
+      "std": 0.0012731336014946272
+    },
+    {
+      "feature": "corr__accel_x__accel_y",
+      "importance": 0.0028384279475982322,
+      "std": 0.000873362445414877
+    },
+    {
+      "feature": "accel_mag__skew",
+      "importance": 0.0026200873362445254,
+      "std": 0.0005348230879439675
+    },
+    {
+      "feature": "tBodyGyro-min()-X",
+      "importance": 0.0021834061135371117,
+      "std": 0.0015439012689662723
+    },
+    {
+      "feature": "gyro_mag__energy",
+      "importance": 0.0021834061135370675,
+      "std": 0.0
+    },
+    {
+      "feature": "tBodyGyroJerkMag-max()",
+      "importance": 0.0021834061135370675,
+      "std": 0.0
+    },
+    {
+      "feature": "tBodyGyro-min()-Z",
+      "importance": 0.0021834061135370675,
+      "std": 0.0
+    },
+    {
+      "feature": "tBodyGyro-max()-X",
+      "importance": 0.0019650655021834053,
+      "std": 0.0010696461758878803
+    },
+    {
+      "feature": "corr__gyro_x__gyro_y",
+      "importance": 0.0019650655021833828,
+      "std": 0.0008169557613043707
+    },
+    {
+      "feature": "tBodyGyroMag-max()",
+      "importance": 0.0019650655021833606,
+      "std": 0.00043668122270741345
+    },
+    {
+      "feature": "tBodyGyroJerk-mad()-Z",
+      "importance": 0.0019650655021833606,
+      "std": 0.00043668122270741345
+    },
+    {
+      "feature": "tBodyAccJerk-mad()-Z",
+      "importance": 0.0019650655021833606,
+      "std": 0.00043668122270741345
+    },
+    {
+      "feature": "tBodyGyroJerk-min()-Z",
+      "importance": 0.001746724890829654,
+      "std": 0.0005348230879439129
+    },
+    {
+      "feature": "tBodyGyroJerk-energy()-X",
+      "importance": 0.001746724890829654,
+      "std": 0.000873362445414827
+    },
+    {
+      "feature": "tBodyAccJerk-mad()-Y",
+      "importance": 0.001746724890829654,
+      "std": 0.000873362445414827
+    },
+    {
+      "feature": "tBodyGyroJerk-min()-Y",
+      "importance": 0.0015283842794759472,
+      "std": 0.0005348230879439129
+    },
+    {
+      "feature": "gyro_mag__rms",
+      "importance": 0.0015283842794759472,
+      "std": 0.0005348230879439129
+    },
+    {
+      "feature": "accel_mag__std",
+      "importance": 0.0013100436681222406,
+      "std": 0.0008169557613043352
+    },
+    {
+      "feature": "accel_y__std",
+      "importance": 0.0013100436681222406,
+      "std": 0.0008169557613043352
+    },
+    {
+      "feature": "gyro_x__rms",
+      "importance": 0.0010917030567685337,
+      "std": 0.0006904536375913333
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-energy()",
+      "importance": 0.0010917030567685337,
+      "std": 0.0
+    },
+    {
+      "feature": "gyro_z__fft_energy",
+      "importance": 0.0010917030567685337,
+      "std": 0.0
+    },
+    {
+      "feature": "gyro_z__range",
+      "importance": 0.0010917030567685337,
+      "std": 0.0
+    },
+    {
+      "feature": "tBodyGyro-max()-Z",
+      "importance": 0.0010917030567685337,
+      "std": 0.0006904536375913333
+    },
+    {
+      "feature": "gyro_x__range",
+      "importance": 0.000873362445414827,
+      "std": 0.0004366812227074135
+    },
+    {
+      "feature": "gyro_z__rms",
+      "importance": 0.000873362445414827,
+      "std": 0.0004366812227074135
+    },
+    {
+      "feature": "accel_mag__energy",
+      "importance": 0.000873362445414827,
+      "std": 0.0004366812227074135
+    },
+    {
+      "feature": "gyro_z__energy",
+      "importance": 0.0006550218340611203,
+      "std": 0.0005348230879439129
+    },
+    {
+      "feature": "accel_mag__fft_spread",
+      "importance": 0.0006550218340611203,
+      "std": 0.0005348230879439129
+    },
+    {
+      "feature": "tBodyGyroJerkMag-energy()",
+      "importance": 0.0006550218340611203,
+      "std": 0.0005348230879439129
+    },
+    {
+      "feature": "accel_z__range",
+      "importance": 0.0006550218340611203,
+      "std": 0.0005348230879439129
+    },
+    {
+      "feature": "fBodyGyro-energy()-X",
+      "importance": 0.0004366812227074135,
+      "std": 0.000534823087943913
+    },
+    {
+      "feature": "fBodyGyro-energy()-Y",
+      "importance": 0.0004366812227074135,
+      "std": 0.000534823087943913
+    },
+    {
+      "feature": "tBodyGyroJerk-mad()-X",
+      "importance": 0.0004366812227074135,
+      "std": 0.000534823087943913
+    },
+    {
+      "feature": "tBodyGyroJerk-energy()-Y",
+      "importance": 0.0004366812227074135,
+      "std": 0.000534823087943913
+    },
+    {
+      "feature": "tBodyAccJerk-iqr()-Z",
+      "importance": 0.00021834061135370675,
+      "std": 0.0004366812227074135
+    },
+    {
+      "feature": "accel_z__rms",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_z__energy",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_z__skew",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_z__kurt",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_z__zcr",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "gyro_x__std",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_y__zcr",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_y__kurt",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_y__skew",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroMag-kurtosis()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-mean()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-min()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-sma()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-iqr()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-entropy()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-maxInds",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-meanFreq()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-skewness()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroJerkMag-kurtosis()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "angle(tBodyAccMean,gravity)",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "angle(tBodyAccJerkMean,gravityMean)",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_y__rms",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "accel_y__energy",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroMag-skewness()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-max()-X",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-max()-Y",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-max()-Z",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-min()-X",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyAccMag-entropy()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyAccMag-maxInds",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyAccMag-meanFreq()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-iqr()-X",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-iqr()-Y",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-iqr()-Z",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-entropy()-X",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-entropy()-Y",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroMag-maxInds",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyBodyGyroMag-meanFreq()",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyAccJerk-meanFreq()-Z",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyAccJerk-skewness()-X",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyAccJerk-skewness()-Y",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyAccJerk-skewness()-Z",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-meanFreq()-Y",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fBodyGyro-meanFreq()-Z",
+      "importance": 0.0,
+      "std": 0.0
+    }
+  ],
+  "removable_zero_importance": [
+    "accel_z__rms",
+    "accel_z__energy",
+    "accel_z__skew",
+    "accel_z__kurt",
+    "accel_z__zcr",
+    "gyro_x__std",
+    "accel_y__zcr",
+    "accel_y__kurt",
+    "accel_y__skew",
+    "fBodyBodyGyroMag-kurtosis()",
+    "fBodyBodyGyroJerkMag-mean()",
+    "fBodyBodyGyroJerkMag-min()",
+    "fBodyBodyGyroJerkMag-sma()",
+    "fBodyBodyGyroJerkMag-iqr()",
+    "fBodyBodyGyroJerkMag-entropy()",
+    "fBodyBodyGyroJerkMag-maxInds",
+    "fBodyBodyGyroJerkMag-meanFreq()",
+    "fBodyBodyGyroJerkMag-skewness()",
+    "fBodyBodyGyroJerkMag-kurtosis()",
+    "angle(tBodyAccMean,gravity)",
+    "angle(tBodyAccJerkMean,gravityMean)",
+    "accel_y__rms",
+    "accel_y__energy",
+    "fBodyBodyGyroMag-skewness()",
+    "fBodyGyro-max()-X",
+    "fBodyGyro-max()-Y",
+    "fBodyGyro-max()-Z",
+    "fBodyGyro-min()-X",
+    "fBodyAccMag-entropy()",
+    "fBodyAccMag-maxInds",
+    "fBodyAccMag-meanFreq()",
+    "fBodyGyro-iqr()-X",
+    "fBodyGyro-iqr()-Y",
+    "fBodyGyro-iqr()-Z",
+    "fBodyGyro-entropy()-X",
+    "fBodyGyro-entropy()-Y",
+    "fBodyBodyGyroMag-maxInds",
+    "fBodyBodyGyroMag-meanFreq()",
+    "fBodyAccJerk-meanFreq()-Z",
+    "fBodyAccJerk-skewness()-X",
+    "fBodyAccJerk-skewness()-Y",
+    "fBodyAccJerk-skewness()-Z",
+    "fBodyGyro-meanFreq()-Y",
+    "fBodyGyro-meanFreq()-Z",
+    "fBodyGyro-skewness()-X",
+    "fBodyGyro-mean()-X",
+    "fBodyGyro-mean()-Y",
+    "fBodyGyro-mean()-Z",
+    "fBodyGyro-std()-X",
+    "fBodyGyro-std()-Y",
+    "fBodyGyro-std()-Z",
+    "fBodyGyro-mad()-X",
+    "fBodyGyro-mad()-Y",
+    "fBodyGyro-mad()-Z",
+    "fBodyAccJerk-min()-Z",
+    "fBodyAccJerk-sma()",
+    "fBodyAccJerk-energy()-X",
+    "fBodyAccJerk-energy()-Y",
+    "fBodyGyro-min()-Y",
+    "fBodyGyro-min()-Z",
+    "fBodyGyro-sma()",
+    "fBodyAccJerk-iqr()-Z",
+    "fBodyAccJerk-entropy()-X",
+    "fBodyAccJerk-entropy()-Y",
+    "fBodyAccJerk-entropy()-Z",
+    "fBodyAccJerk-maxInds-X",
+    "fBodyAccJerk-maxInds-Y",
+    "fBodyAccJerk-maxInds-Z",
+    "fBodyAccJerk-meanFreq()-X",
+    "fBodyAccJerk-meanFreq()-Y",
+    "fBodyAcc-kurtosis()-Y",
+    "fBodyAcc-kurtosis()-Z",
+    "fBodyAccJerk-mean()-X",
+    "fBodyAccJerk-mean()-Y",
+    "fBodyAccJerk-kurtosis()-X",
+    "fBodyAccJerk-kurtosis()-Y",
+    "fBodyAccJerk-kurtosis()-Z",
+    "fBodyAccJerk-std()-Z",
+    "fBodyAccJerk-mad()-X",
+    "fBodyAccJerk-mad()-Y",
+    "fBodyAccJerk-mad()-Z",
+    "fBodyAccJerk-max()-X",
+    "fBodyAccJerk-max()-Y",
+    "fBodyAccJerk-max()-Z",
+    "fBodyAccJerk-min()-X",
+    "fBodyAccJerk-min()-Y",
+    "fBodyAcc-iqr()-X",
+    "fBodyAcc-iqr()-Y",
+    "fBodyAcc-iqr()-Z",
+    "fBodyAcc-entropy()-X",
+    "fBodyAccJerk-energy()-Z",
+    "fBodyAccJerk-iqr()-X",
+    "fBodyAccJerk-iqr()-Y",
+    "fBodyAcc-maxInds-Y",
+    "fBodyAcc-maxInds-Z",
+    "fBodyAcc-meanFreq()-X",
+    "fBodyAcc-meanFreq()-Y",
+    "fBodyAcc-meanFreq()-Z",
+    "fBodyAcc-skewness()-X",
+    "fBodyAcc-skewness()-Y",
+    "fBodyAcc-skewness()-Z",
+    "fBodyAcc-kurtosis()-X",
+    "fBodyAcc-std()-X",
+    "fBodyAcc-std()-Y",
+    "fBodyAcc-std()-Z",
+    "fBodyAcc-mad()-X",
+    "fBodyAccJerk-mean()-Z",
+    "fBodyAccJerk-std()-X",
+    "fBodyAccJerk-std()-Y",
+    "fBodyAcc-max()-Y",
+    "fBodyAcc-max()-Z",
+    "fBodyAcc-min()-X",
+    "fBodyAcc-min()-Y",
+    "fBodyAcc-min()-Z",
+    "fBodyAcc-sma()",
+    "fBodyAcc-energy()-X",
+    "fBodyAcc-energy()-Y",
+    "fBodyAcc-energy()-Z",
+    "tBodyGyroMag-arCoeff()3",
+    "tBodyGyroMag-arCoeff()4",
+    "tBodyGyroJerkMag-mean()",
+    "tBodyGyroJerkMag-std()",
+    "tBodyGyroJerkMag-mad()",
+    "fBodyAcc-entropy()-Y",
+    "fBodyAcc-entropy()-Z",
+    "fBodyAcc-maxInds-X",
+    "tBodyGyroJerkMag-iqr()",
+    "tBodyGyroJerkMag-arCoeff()1",
+    "tBodyGyroJerkMag-arCoeff()2",
+    "tBodyGyroJerkMag-arCoeff()3",
+    "tBodyGyroJerkMag-arCoeff()4",
+    "fBodyAcc-mean()-X",
+    "fBodyAcc-mean()-Y",
+    "fBodyAcc-mean()-Z",
+    "tBodyAccJerkMag-std()",
+    "tBodyAccJerkMag-mad()",
+    "tBodyAccJerkMag-max()",
+    "tBodyAccJerkMag-min()",
+    "tBodyAccJerkMag-energy()",
+    "tBodyAccJerkMag-iqr()",
+    "tBodyAccJerkMag-entropy()",
+    "fBodyAcc-mad()-Y",
+    "fBodyAcc-mad()-Z",
+    "fBodyAcc-max()-X",
+    "tBodyAccJerkMag-arCoeff()4",
+    "tBodyGyroMag-mad()",
+    "tBodyGyroMag-iqr()",
+    "tBodyGyroMag-entropy()",
+    "tBodyGyroMag-arCoeff()1",
+    "tBodyGyroMag-arCoeff()2",
+    "tBodyAccMag-iqr()",
+    "tBodyAccMag-entropy()",
+    "tBodyAccMag-arCoeff()1",
+    "tBodyAccMag-arCoeff()2",
+    "tBodyAccMag-arCoeff()3",
+    "tBodyAccMag-arCoeff()4",
+    "tGravityAccMag-mean()",
+    "tGravityAccMag-std()",
+    "tGravityAccMag-mad()",
+    "tGravityAccMag-max()",
+    "tGravityAccMag-entropy()",
+    "tGravityAccMag-arCoeff()1",
+    "tGravityAccMag-arCoeff()2",
+    "tGravityAccMag-arCoeff()3",
+    "tGravityAccMag-arCoeff()4",
+    "tBodyAccJerkMag-mean()",
+    "tBodyGyroJerk-arCoeff()-Y,2",
+    "tBodyGyroJerk-arCoeff()-Y,3",
+    "tBodyGyroJerk-arCoeff()-Y,4",
+    "tBodyGyroJerk-arCoeff()-Z,1",
+    "tBodyGyroJerk-arCoeff()-Z,2",
+    "tBodyGyroJerk-arCoeff()-Z,3",
+    "tBodyGyroJerk-arCoeff()-Z,4",
+    "tBodyGyroJerk-correlation()-X,Y",
+    "tBodyGyroJerk-correlation()-X,Z",
+    "tBodyGyroJerk-correlation()-Y,Z",
+    "tBodyAccJerkMag-arCoeff()1",
+    "tBodyAccJerkMag-arCoeff()2",
+    "tBodyAccJerkMag-arCoeff()3",
+    "tBodyAccMag-max()",
+    "tBodyAccMag-min()",
+    "tBodyAccMag-energy()",
+    "tBodyAccMag-mad()",
+    "tBodyGyroJerk-max()-Z",
+    "tBodyGyroJerk-min()-X",
+    "tBodyGyroJerk-sma()",
+    "tBodyGyroJerk-iqr()-X",
+    "tBodyGyroJerk-iqr()-Y",
+    "tBodyGyroJerk-iqr()-Z",
+    "tBodyGyroJerk-entropy()-X",
+    "tBodyGyroJerk-entropy()-Y",
+    "tGravityAccMag-min()",
+    "tGravityAccMag-energy()",
+    "tGravityAccMag-iqr()",
+    "tBodyGyroJerk-arCoeff()-X,3",
+    "tBodyGyroJerk-arCoeff()-X,4",
+    "tBodyGyroJerk-arCoeff()-Y,1",
+    "tBodyGyroJerk-arCoeff()-X,1",
+    "tBodyGyroJerk-arCoeff()-X,2",
+    "tBodyGyro-arCoeff()-Y,4",
+    "tBodyGyro-arCoeff()-Z,1",
+    "tBodyGyro-arCoeff()-Z,2",
+    "tBodyGyro-arCoeff()-Z,3",
+    "tBodyGyro-arCoeff()-Z,4",
+    "tBodyGyroJerk-mean()-X",
+    "tBodyGyroJerk-mean()-Y",
+    "tBodyGyroJerk-mean()-Z",
+    "tBodyGyroJerk-std()-X",
+    "tBodyGyroJerk-std()-Y",
+    "tBodyGyroJerk-std()-Z",
+    "tBodyAccMag-mean()",
+    "tBodyAccMag-std()",
+    "fBodyBodyAccJerkMag-kurtosis()",
+    "fBodyBodyGyroMag-mean()",
+    "fBodyGyro-skewness()-Y",
+    "fBodyGyro-skewness()-Z",
+    "fBodyGyro-kurtosis()-X",
+    "fBodyGyro-kurtosis()-Y",
+    "fBodyGyro-kurtosis()-Z",
+    "fBodyAccMag-mean()",
+    "fBodyAccMag-std()",
+    "fBodyAccMag-mad()",
+    "tBodyGyro-entropy()-Z",
+    "tBodyGyro-arCoeff()-X,1",
+    "tBodyGyro-arCoeff()-X,2",
+    "tBodyGyro-arCoeff()-X,3",
+    "tBodyGyro-arCoeff()-X,4",
+    "tBodyGyroJerk-entropy()-Z",
+    "tBodyGyro-mad()-Y",
+    "tBodyGyro-mad()-Z",
+    "tBodyGyroJerk-max()-X",
+    "tBodyGyroJerk-max()-Y",
+    "tBodyGyro-sma()",
+    "tBodyGyro-iqr()-X",
+    "tBodyGyro-iqr()-Y",
+    "tBodyGyro-iqr()-Z",
+    "tBodyGyro-entropy()-X",
+    "tBodyGyro-entropy()-Y",
+    "fBodyGyro-entropy()-Z",
+    "fBodyGyro-maxInds-X",
+    "fBodyGyro-maxInds-Y",
+    "fBodyGyro-maxInds-Z",
+    "fBodyGyro-meanFreq()-X",
+    "fBodyBodyAccJerkMag-skewness()",
+    "tBodyAccJerk-arCoeff()-X,1",
+    "tBodyAccJerk-arCoeff()-X,2",
+    "tBodyAccJerk-arCoeff()-X,3",
+    "tBodyGyro-arCoeff()-Y,1",
+    "tBodyGyro-arCoeff()-Y,2",
+    "tBodyGyro-arCoeff()-Y,3",
+    "tBodyAccJerk-arCoeff()-Y,3",
+    "tBodyAccJerk-arCoeff()-Y,4",
+    "tBodyAccJerk-arCoeff()-Z,1",
+    "tBodyAccJerk-arCoeff()-Z,2",
+    "tBodyAccJerk-arCoeff()-Z,3",
+    "tBodyAccJerk-arCoeff()-Z,4",
+    "tBodyAccJerk-correlation()-X,Y",
+    "tBodyAccJerk-correlation()-X,Z",
+    "tBodyAccJerk-correlation()-Y,Z",
+    "tBodyGyro-mad()-X",
+    "tBodyAccJerk-std()-Y",
+    "tBodyAccJerk-std()-Z",
+    "tBodyAccJerk-mad()-X",
+    "tBodyAccJerk-max()-X",
+    "tBodyAccJerk-max()-Y",
+    "tBodyAccJerk-max()-Z",
+    "tBodyAccJerk-sma()",
+    "tBodyAccJerk-energy()-X",
+    "tBodyAccJerk-energy()-Y",
+    "tBodyAccJerk-energy()-Z",
+    "tBodyAccJerk-iqr()-X",
+    "tBodyAccJerk-iqr()-Y",
+    "accel_z__mean",
+    "tBodyAccJerk-entropy()-X",
+    "tBodyAccJerk-entropy()-Y",
+    "tBodyAccJerk-entropy()-Z",
+    "tGravityAcc-arCoeff()-X,4",
+    "tGravityAcc-arCoeff()-Y,1",
+    "tGravityAcc-arCoeff()-Y,2",
+    "tGravityAcc-arCoeff()-Y,3",
+    "tGravityAcc-arCoeff()-Y,4",
+    "tGravityAcc-arCoeff()-Z,1",
+    "tGravityAcc-arCoeff()-Z,2",
+    "tGravityAcc-arCoeff()-Z,3",
+    "tBodyAccJerk-arCoeff()-X,4",
+    "tBodyAccJerk-arCoeff()-Y,1",
+    "tBodyAccJerk-arCoeff()-Y,2",
+    "tGravityAcc-correlation()-Y,Z",
+    "tBodyAccJerk-mean()-X",
+    "tBodyAccJerk-mean()-Y",
+    "tBodyAccJerk-mean()-Z",
+    "tBodyAccJerk-std()-X",
+    "tGravityAcc-min()-X",
+    "tGravityAcc-min()-Y",
+    "tGravityAcc-min()-Z",
+    "tGravityAcc-sma()",
+    "tGravityAcc-energy()-X",
+    "tGravityAcc-energy()-Y",
+    "tGravityAcc-energy()-Z",
+    "tGravityAcc-iqr()-X",
+    "tBodyAccJerk-min()-X",
+    "tBodyAccJerk-min()-Y",
+    "tBodyAccJerk-min()-Z",
+    "tGravityAcc-entropy()-Y",
+    "tGravityAcc-entropy()-Z",
+    "tGravityAcc-arCoeff()-X,1",
+    "tGravityAcc-arCoeff()-X,2",
+    "tGravityAcc-arCoeff()-X,3",
+    "tBodyAcc-arCoeff()-Z,3",
+    "tBodyAcc-arCoeff()-Z,4",
+    "tBodyAcc-correlation()-X,Y",
+    "tBodyAcc-correlation()-X,Z",
+    "tBodyAcc-correlation()-Y,Z",
+    "tGravityAcc-mean()-X",
+    "tGravityAcc-mean()-Z",
+    "tGravityAcc-std()-X",
+    "tGravityAcc-arCoeff()-Z,4",
+    "tGravityAcc-correlation()-X,Y",
+    "tGravityAcc-correlation()-X,Z",
+    "tGravityAcc-mad()-Y",
+    "tGravityAcc-mad()-Z",
+    "tGravityAcc-max()-X",
+    "tGravityAcc-max()-Y",
+    "tGravityAcc-max()-Z",
+    "tBodyAcc-energy()-Z",
+    "tBodyAcc-iqr()-Y",
+    "tBodyAcc-iqr()-Z",
+    "tBodyAcc-entropy()-X",
+    "tBodyAcc-entropy()-Y",
+    "tBodyAcc-entropy()-Z",
+    "tBodyAcc-arCoeff()-X,1",
+    "tBodyAcc-arCoeff()-X,2",
+    "tBodyAcc-arCoeff()-X,3",
+    "tGravityAcc-iqr()-Y",
+    "tGravityAcc-iqr()-Z",
+    "tGravityAcc-entropy()-X",
+    "tBodyAcc-arCoeff()-Y,3",
+    "tBodyAcc-arCoeff()-Y,4",
+    "tBodyAcc-arCoeff()-Z,1",
+    "tBodyAcc-arCoeff()-Z,2",
+    "tBodyAcc-mean()-Z",
+    "tBodyAcc-std()-X",
+    "tBodyAcc-std()-Y",
+    "tBodyAcc-std()-Z",
+    "tBodyAcc-mad()-X",
+    "tBodyAcc-mad()-Y",
+    "tBodyAcc-mad()-Z",
+    "tBodyAcc-max()-X",
+    "tBodyAcc-max()-Y",
+    "tBodyAcc-max()-Z",
+    "tGravityAcc-std()-Y",
+    "tGravityAcc-std()-Z",
+    "tGravityAcc-mad()-X",
+    "tBodyAcc-sma()",
+    "tBodyAcc-energy()-X",
+    "tBodyAcc-energy()-Y",
+    "jerk_x__fft_entropy",
+    "jerk_x__fft_energy",
+    "jerk_y__fft_domfreq",
+    "jerk_y__fft_dommag",
+    "jerk_y__fft_centroid",
+    "jerk_y__fft_spread",
+    "jerk_y__fft_entropy",
+    "jerk_y__fft_energy",
+    "jerk_z__fft_domfreq",
+    "jerk_z__fft_dommag",
+    "tBodyAcc-arCoeff()-X,4",
+    "tBodyAcc-arCoeff()-Y,1",
+    "tBodyAcc-arCoeff()-Y,2",
+    "jerk_z__fft_energy",
+    "tBodyAcc-mean()-X",
+    "tBodyAcc-mean()-Y",
+    "gyro_z__fft_entropy",
+    "accel_mag__fft_domfreq",
+    "accel_mag__fft_dommag",
+    "accel_mag__fft_centroid",
+    "accel_mag__fft_entropy",
+    "accel_mag__fft_energy",
+    "gyro_mag__fft_domfreq",
+    "gyro_mag__fft_dommag",
+    "gyro_mag__fft_centroid",
+    "gyro_mag__fft_spread",
+    "tBodyAcc-min()-X",
+    "tBodyAcc-min()-Y",
+    "tBodyAcc-min()-Z",
+    "jerk_x__fft_dommag",
+    "jerk_x__fft_centroid",
+    "jerk_x__fft_spread",
+    "gyro_x__fft_dommag",
+    "gyro_x__fft_centroid",
+    "gyro_x__fft_spread",
+    "gyro_x__fft_entropy",
+    "gyro_x__fft_energy",
+    "gyro_y__fft_domfreq",
+    "gyro_y__fft_dommag",
+    "gyro_y__fft_centroid",
+    "gyro_y__fft_spread",
+    "gyro_y__fft_entropy",
+    "gyro_y__fft_energy",
+    "gyro_z__fft_domfreq",
+    "jerk_z__fft_centroid",
+    "jerk_z__fft_spread",
+    "jerk_z__fft_entropy",
+    "gyro_z__fft_spread",
+    "accel_x__fft_spread",
+    "accel_x__fft_entropy",
+    "accel_x__fft_energy",
+    "accel_y__fft_domfreq",
+    "accel_y__fft_dommag",
+    "accel_y__fft_centroid",
+    "accel_y__fft_spread",
+    "accel_y__fft_entropy",
+    "accel_y__fft_energy",
+    "accel_z__fft_domfreq",
+    "accel_z__fft_dommag",
+    "accel_z__fft_centroid",
+    "gyro_mag__fft_entropy",
+    "jerk_x__fft_domfreq",
+    "accel_z__fft_energy",
+    "gyro_x__fft_domfreq",
+    "fBodyAccMag-kurtosis()",
+    "fBodyBodyAccJerkMag-mean()",
+    "fBodyBodyAccJerkMag-std()",
+    "fBodyBodyAccJerkMag-mad()",
+    "fBodyBodyAccJerkMag-max()",
+    "fBodyBodyAccJerkMag-min()",
+    "fBodyBodyAccJerkMag-sma()",
+    "jerk_y__mean",
+    "jerk_y__std",
+    "jerk_y__rms",
+    "jerk_z__mean",
+    "jerk_z__std",
+    "gyro_z__fft_dommag",
+    "gyro_z__fft_centroid",
+    "accel_x__fft_dommag",
+    "accel_x__fft_centroid",
+    "gyro_mag__skew",
+    "gyro_mag__kurt",
+    "accel_z__fft_spread",
+    "accel_z__fft_entropy",
+    "jerk_x__mean",
+    "jerk_x__std",
+    "jerk_x__rms",
+    "fBodyAccMag-max()",
+    "fBodyAccMag-min()",
+    "fBodyAccMag-sma()",
+    "fBodyAccMag-energy()",
+    "fBodyAccMag-iqr()",
+    "fBodyBodyGyroJerkMag-std()",
+    "fBodyBodyGyroJerkMag-mad()",
+    "fBodyBodyGyroJerkMag-max()",
+    "fBodyAccMag-skewness()",
+    "accel_x__rms",
+    "accel_x__energy",
+    "accel_x__skew",
+    "accel_x__kurt",
+    "accel_x__zcr",
+    "accel_y__range",
+    "gyro_z__skew",
+    "gyro_z__kurt",
+    "jerk_z__rms",
+    "accel_x__fft_domfreq",
+    "accel_mag__mean",
+    "accel_mag__range",
+    "accel_mag__rms",
+    "accel_mag__zcr",
+    "gyro_mag__mean",
+    "gyro_mag__std",
+    "accel_x__mean",
+    "gyro_y__range",
+    "gyro_y__rms",
+    "gyro_y__energy",
+    "gyro_y__skew",
+    "gyro_y__kurt",
+    "gyro_y__zcr",
+    "gyro_z__mean",
+    "gyro_z__std",
+    "fBodyBodyAccJerkMag-energy()",
+    "fBodyBodyAccJerkMag-iqr()",
+    "fBodyBodyAccJerkMag-entropy()",
+    "fBodyBodyAccJerkMag-maxInds",
+    "fBodyBodyAccJerkMag-meanFreq()",
+    "gyro_z__zcr",
+    "gyro_y__std",
+    "gyro_mag__zcr",
+    "gyro_x__kurt",
+    "gyro_x__zcr",
+    "fBodyBodyGyroMag-std()",
+    "fBodyBodyGyroMag-mad()",
+    "fBodyBodyGyroMag-max()",
+    "fBodyBodyGyroMag-min()",
+    "fBodyBodyGyroMag-sma()",
+    "angle(Z,gravityMean)",
+    "fBodyBodyGyroMag-iqr()",
+    "fBodyBodyGyroMag-entropy()",
+    "angle(tBodyGyroMean,gravityMean)",
+    "angle(tBodyGyroJerkMean,gravityMean)",
+    "angle(X,gravityMean)",
+    "angle(Y,gravityMean)",
+    "gyro_x__skew",
+    "accel_x__range",
+    "gyro_mag__range",
+    "gyro_x__energy",
+    "gyro_mag__fft_energy"
+  ],
+  "n_features": 560
+}

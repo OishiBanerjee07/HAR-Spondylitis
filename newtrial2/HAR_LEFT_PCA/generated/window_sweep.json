@@ -1,0 +1,44 @@
+[
+  {
+    "window": 64,
+    "step": 32,
+    "overlap": 0.5,
+    "n_windows": 21593,
+    "val_acc": 0.32782002276368
+  },
+  {
+    "window": 80,
+    "step": 40,
+    "overlap": 0.5,
+    "n_windows": 17253,
+    "val_acc": 0.3578857160468971
+  },
+  {
+    "window": 96,
+    "step": 48,
+    "overlap": 0.5,
+    "n_windows": 14355,
+    "val_acc": 0.3332015179830759
+  },
+  {
+    "window": 100,
+    "step": 50,
+    "overlap": 0.5,
+    "n_windows": 13774,
+    "val_acc": 0.3574367574559039
+  },
+  {
+    "window": 128,
+    "step": 64,
+    "overlap": 0.5,
+    "n_windows": 10731,
+    "val_acc": 0.36428955379447037
+  },
+  {
+    "window": 150,
+    "step": 75,
+    "overlap": 0.5,
+    "n_windows": 9143,
+    "val_acc": 0.3826746142603561
+  }
+]
